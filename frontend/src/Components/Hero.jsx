@@ -1,9 +1,11 @@
+import HeroImg from "../assests/Home/home.jpg";
+
 const Hero = () => {
   return (
     <div
       className="relative z-0 flex-wrap min-h-screen gap-2 md:-mt-10 flex-center-center"
       style={{
-        background: "url('/images/hero-bg-pattern.png')",
+        // background:  `url(${HeroImg})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
       }}
@@ -41,7 +43,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex-1 basis-[20rem]">
-        <img src="/images/hero-4.png" alt="" className="w-full" />
+        <img src={HeroImg} alt="property image" className="w-full" />
       </div>
     </div>
   );
