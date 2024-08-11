@@ -20,32 +20,15 @@ export const Hero = () => {
       <div className="px-4 py-16 mx-auto w-full sm:px-24 lg:px-8 lg:py-20">
         <div className="relative w-full max-w-2xl mx-auto text-center">
           <h2 className="mt-20 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-            Find Your New property Today
+            Find Your New Property Today
             <br className="hidden md:block" />
             With Us.{" "}
-            {/* <span className="relative inline-block px-2">
-              <div className="absolute inset-0 transform -skew-x-12 bg-teal-accent-400" />
-              <span className="relative text-teal-900">lazy dog</span>
-            </span> */}
           </h2>
           <p className="mb-6 text-base text-indigo-100 md:text-lg">
             Finding the home, commercial, or office you’ll love to rent or buy
             just got easier.
           </p>
-          <form className="flex flex-col items-center w-full mb-4 md:flex-row md:px-16">
-            <input
-              placeholder="Email"
-              required
-              type="text"
-              className="flex-grow w-full h-12 px-4 mb-3 text-white transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
-            />
-            <a
-              href="/"
-              className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-teal-900 transition duration-200 rounded shadow-md md:w-auto hover:text-deep-purple-900 bg-teal-accent-400 hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none"
-            >
-              Subscribe
-            </a>
-          </form>
+
           <a
             href="/"
             aria-label="Scroll down"
@@ -61,6 +44,71 @@ export const Hero = () => {
               <path d="M10.293,3.293,6,7.586,1.707,3.293A1,1,0,0,0,.293,4.707l5,5a1,1,0,0,0,1.414,0l5-5a1,1,0,1,0-1.414-1.414Z" />
             </svg>
           </a>
+        </div>
+      </div>
+      <div className="relative flex justify-center mt-35">
+        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg">
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <select
+              id="status"
+              className="mt-2 block w-full rounded-md border border-gray-200 px-6 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+            >
+              <option>Dispached Out</option>
+              <option>In Warehouse</option>
+              <option>Being Brought In</option>
+            </select>
+            <select
+              id="status"
+              className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+            >
+              <option>Dispached Out</option>
+              <option>In Warehouse</option>
+              <option>Being Brought In</option>
+            </select>
+            <select
+              id="status"
+              className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+            >
+              <option>Dispached Out</option>
+              <option>In Warehouse</option>
+              <option>Being Brought In</option>
+            </select>
+            <div className="flex flex-col">
+              <label
+                htmlFor="name"
+                className="text-stone-600 text-sm font-medium"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                placeholder="raspberry juice"
+                className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+              />
+            </div>
+
+            <div className="flex flex-col">
+              <label
+                htmlFor="manufacturer"
+                className="text-stone-600 text-sm font-medium"
+              >
+                Manufacturer
+              </label>
+              <input
+                type="manufacturer"
+                id="manufacturer"
+                placeholder="cadbery"
+                className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+              />
+            </div>
+          </div>
+
+          <div className="mt-6 flex justify-end space-x-4">
+            <button className="active:scale-95 rounded-lg bg-blue-600 px-8 py-2 font-medium text-white outline-none focus:ring hover:opacity-90">
+              Search
+            </button>
+          </div>
         </div>
       </div>
     </div>
