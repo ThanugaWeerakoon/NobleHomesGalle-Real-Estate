@@ -12,6 +12,8 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
+    'react/jsx-uses-react': 'warn',
+    'react/jsx-uses-vars': 'warn',
      "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     'react/jsx-no-target-blank': 'off',

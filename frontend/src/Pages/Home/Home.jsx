@@ -1,4 +1,5 @@
-import Hero from "../../Components/Hero"
+import { Hero } from "../../Components/Hero"
+
 
 
 export const Home = () => {
