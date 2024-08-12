@@ -4,7 +4,7 @@ import home from "../assests/Home/home.jpg";
 export const Hero = () => {
   return (
     <div
-      className="relative w-full bg-cover bg-center"
+      className="relative w-full h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${home})` }}
     >
       <div className="absolute inset-x-0 bottom-0">
@@ -53,7 +53,7 @@ export const Hero = () => {
               id="status"
               className="mt-2 block w-full rounded-md border border-gray-200 px-6 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             >
-              <option>Dispached Out</option>
+              <option>Dispatched Out</option>
               <option>In Warehouse</option>
               <option>Being Brought In</option>
             </select>
@@ -61,7 +61,7 @@ export const Hero = () => {
               id="status"
               className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             >
-              <option>Dispached Out</option>
+              <option>Dispatched Out</option>
               <option>In Warehouse</option>
               <option>Being Brought In</option>
             </select>
@@ -69,7 +69,7 @@ export const Hero = () => {
               id="status"
               className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             >
-              <option>Dispached Out</option>
+              <option>Dispatched Out</option>
               <option>In Warehouse</option>
               <option>Being Brought In</option>
             </select>
@@ -98,7 +98,7 @@ export const Hero = () => {
               <input
                 type="manufacturer"
                 id="manufacturer"
-                placeholder="cadbery"
+                placeholder="cadbury"
                 className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
               />
             </div>
