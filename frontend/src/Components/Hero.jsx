@@ -53,7 +53,7 @@ export const Hero = () => {
               id="status"
               className="mt-2 block w-full rounded-md border border-gray-200 px-6 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             >
-              <option>Dispatched Out</option>
+              <option>Property Type</option>
               <option>In Warehouse</option>
               <option>Being Brought In</option>
             </select>
@@ -61,7 +61,7 @@ export const Hero = () => {
               id="status"
               className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             >
-              <option>Dispatched Out</option>
+              <option>Province</option>
               <option>In Warehouse</option>
               <option>Being Brought In</option>
             </select>
@@ -69,7 +69,7 @@ export const Hero = () => {
               id="status"
               className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             >
-              <option>Dispatched Out</option>
+              <option>City</option>
               <option>In Warehouse</option>
               <option>Being Brought In</option>
             </select>
@@ -78,12 +78,12 @@ export const Hero = () => {
                 htmlFor="name"
                 className="text-stone-600 text-sm font-medium"
               >
-                Name
+                Min Sales Price 
               </label>
               <input
                 type="text"
                 id="name"
-                placeholder="raspberry juice"
+                placeholder=" Min Sales Price"
                 className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
               />
             </div>
@@ -93,12 +93,12 @@ export const Hero = () => {
                 htmlFor="manufacturer"
                 className="text-stone-600 text-sm font-medium"
               >
-                Manufacturer
+                Max Sales Price
               </label>
               <input
                 type="manufacturer"
                 id="manufacturer"
-                placeholder="cadbury"
+                placeholder="Max Sales Price"
                 className="mt-2 block w-full rounded-md border border-gray-200 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
               />
             </div>
