@@ -1,4 +1,3 @@
-import React from "react";
 import home from "../assests/Home/home.jpg";
 
 export const Hero = () => {
@@ -78,7 +77,7 @@ export const Hero = () => {
                 htmlFor="name"
                 className="text-stone-600 text-sm font-medium"
               >
-                Min Sales Price 
+                Min Sales Price
               </label>
               <input
                 type="text"
