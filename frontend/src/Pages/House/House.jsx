@@ -19,9 +19,9 @@ const House = () => {
       <div className="px-4 py-16 mx-auto w-full sm:px-24 lg:px-8 lg:py-20">
         <div className="relative w-full max-w-2xl mx-auto text-center">
           <h2 className="mt-20 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-            Find Your New Property Today
+            Exceptional Homes for Every 
             <br className="hidden md:block" />
-            With Us.{" "}
+            Lifestyle.{" "}
           </h2>
           <p className="mb-6 text-base text-indigo-100 md:text-lg">
             Finding the home, commercial, or office you’ll love to rent or buy
