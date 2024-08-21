@@ -7,6 +7,11 @@ import {
   Button,
 } from "@material-tailwind/react";
 import Land from "../assests/Home/land.jpg"
+import Land1 from "../assests/Home/land1.jpg";
+import Land2 from "../assests/Home/land2.jpg";
+import House from "../assests/Home/house.jpg";
+import House1 from "../assests/Home/house1.jpg";
+import House2 from "../assests/Home/house2.jpg";
 const OurProperties = () => {
   return (
     <div className="w-full p-6 ">
@@ -69,7 +74,7 @@ const OurProperties = () => {
             className="h-96 rounded-lg"
           >
             <img
-              src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+              src={Land1}
               alt="card-image"
               className="h-full w-full object-cover rounded-lg"
             />
@@ -116,7 +121,7 @@ const OurProperties = () => {
             className="h-96 rounded-lg"
           >
             <img
-              src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+              src={Land2}
               alt="card-image"
               className="h-full w-full object-cover rounded-lg"
             />
@@ -163,7 +168,7 @@ const OurProperties = () => {
             className="h-96 rounded-lg"
           >
             <img
-              src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+              src={House}
               alt="card-image"
               className="h-full w-full object-cover rounded-lg"
             />
@@ -210,7 +215,7 @@ const OurProperties = () => {
             className="h-96 rounded-lg"
           >
             <img
-              src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+              src={House1}
               alt="card-image"
               className="h-full w-full object-cover rounded-lg"
             />
@@ -257,7 +262,7 @@ const OurProperties = () => {
             className="h-96 rounded-lg"
           >
             <img
-              src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+              src={House2}
               alt="card-image"
               className="h-full w-full object-cover rounded-lg"
             />
