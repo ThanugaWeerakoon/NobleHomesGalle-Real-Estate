@@ -28,7 +28,7 @@ const TopNav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="/" className="flex items-center">
           Home
         </a>
       </Typography>
@@ -72,7 +72,7 @@ const TopNav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="about" className="flex items-center">
           About
         </a>
       </Typography>
