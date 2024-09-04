@@ -1,4 +1,4 @@
-// import OurProperties from "../../Components/OurProperties"
+
 import { ContactBackground } from "./ContactBackground"
 import { ContactPageDown } from "./ContactPageDown"
 
@@ -13,4 +13,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;
