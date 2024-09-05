@@ -6,6 +6,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const TopNav = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -32,14 +33,19 @@ const TopNav = () => {
           Home
         </a>
       </Typography>
+
       <li className="relative">
         <button
-          onClick={() => setDropdownOpen(!dropdownOpen)}
+          onClick={() => {
+            setDropdownOpen(!dropdownOpen);
+          }}
           className="flex items-center p-1 font-normal text-blue-gray"
         >
           Property
           <svg
-            className={`ml-2 h-4 w-4 transform ${dropdownOpen ? 'rotate-180' : ''}`}
+            className={`ml-5 h-4 w-4 transform ${
+              dropdownOpen ? "rotate-180" : ""
+            }`}
             fill="none"
             stroke="currentColor"
             strokeWidth={2}
@@ -52,20 +58,33 @@ const TopNav = () => {
           </svg>
         </button>
         {dropdownOpen && (
-          <ul className="absolute mt-2 bg-white shadow-lg rounded-lg w-40">
+          <ul className="absolute mt-2 bg-white shadow-lg rounded-lg w-40 z-50">
             <li>
-              <a href="#" className="block p-2 hover:bg-gray-200">
+              <Link
+                to="/land"
+                className="block p-2 hover:bg-gray-200"
+                onClick={() => {
+                  setDropdownOpen(false); 
+                }}
+              >
                 Land
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block p-2 hover:bg-gray-200">
+              <Link
+                to="/house"
+                className="block p-2 hover:bg-gray-200"
+                onClick={() => {
+                  setDropdownOpen(false); 
+                }}
+              >
                 House
-              </a>
+              </Link>
             </li>
           </ul>
         )}
       </li>
+
       <Typography
         as="li"
         variant="small"
@@ -76,6 +95,7 @@ const TopNav = () => {
           About
         </a>
       </Typography>
+
       <Typography
         as="li"
         variant="small"
@@ -104,18 +124,10 @@ const TopNav = () => {
             <div className="mr-4 hidden lg:block">{navList}</div>
           </div>
           <div className="flex items-center gap-x-1">
-            <Button
-              variant="text"
-              size="sm"
-              className="hidden lg:inline-block"
-            >
+            <Button variant="text" size="sm" className="hidden lg:inline-block">
               <span>Log In</span>
             </Button>
-            <Button
-              variant="text"
-              size="sm"
-              className="hidden lg:inline-block"
-            >
+            <Button variant="text" size="sm" className="hidden lg:inline-block">
               <span>Sign In</span>
             </Button>
           </div>
