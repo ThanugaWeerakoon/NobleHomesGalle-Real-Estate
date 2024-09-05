@@ -1,4 +1,5 @@
 import home from "../../assests/Home/home.jpg";
+import hero from "../../assests/Land/Hero.png";
 import { FaHome } from "react-icons/fa";
 import {
   Card,
@@ -66,7 +67,7 @@ const Land = () => {
     <div>
       <div
         className="relative w-full h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url(${home})` }}
+        style={{ backgroundImage: `url(${hero})` }}
       >
         <div className="absolute inset-x-0 bottom-0">
           <svg
