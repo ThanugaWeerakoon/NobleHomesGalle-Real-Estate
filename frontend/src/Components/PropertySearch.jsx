@@ -2,7 +2,7 @@ import React from 'react'
 
 const PropertySearch = () => {
   return (
-    <div className="relative flex justify-center ">
+    <div className="relative flex justify-center">
         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             <select
