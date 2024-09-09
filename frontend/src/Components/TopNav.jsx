@@ -82,7 +82,7 @@ const TopNav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#Contact" className="flex items-center">
+        <a href="contact" className="flex items-center">
           Contact
         </a>
       </Typography>
