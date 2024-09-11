@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import Streetview from '../Itempage/Streetview';
+import OurProperties from "./OurProperties";
 
 
 export default function HouseItem() {
@@ -22,19 +23,7 @@ export default function HouseItem() {
     message: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form data submitted:", formData);
-  };
-
+  
   return (
     <div>
       <div className="mx-10">
@@ -176,7 +165,8 @@ export default function HouseItem() {
       
       <Streetview />
 
-      
+
+    <OurProperties/>
 
       <div className="flex flex-col lg:flex-row justify-between items-start lg:space-x-10 mt-10">
         <div className="w-full lg:w-1/2"></div>
