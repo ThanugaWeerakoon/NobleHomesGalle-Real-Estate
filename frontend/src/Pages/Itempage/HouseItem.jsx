@@ -13,7 +13,9 @@ import "swiper/css/navigation";
 
 import Streetview from '../Itempage/Streetview';
 import OurProperties from "./OurProperties";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faBed, faShower, faCar } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../../Components/Footer";
 
 export default function HouseItem() {
   const [formData, setFormData] = useState({
@@ -23,7 +25,6 @@ export default function HouseItem() {
     message: "",
   });
 
-  
   return (
     <div>
       <div className="mx-10">
@@ -90,6 +91,34 @@ export default function HouseItem() {
           <b>Rs 55,000,000 TOTAL PRICE</b>
         </span>
       </h2>
+
+      <div className="lg:px-10 mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div className="flex items-center relative">
+        <FontAwesomeIcon icon={faHome} size="2x" className="text-[#083199]" />
+        <span className="ml-5 text-black">4453 sqft</span>
+        <div className="absolute inset-y-0 right-0 flex items-center pr-2">
+          <span className="text-[#083199]">|</span>
+        </div>
+      </div>
+      <div className="flex items-center relative">
+        <FontAwesomeIcon icon={faBed} size="2x" className="text-[#083199]" />
+        <span className="ml-5 text-black">05</span>
+        <div className="absolute inset-y-0 right-0 flex items-center pr-2">
+          <span className="text-[#083199]">|</span>
+        </div>
+      </div>
+      <div className="flex items-center relative">
+        <FontAwesomeIcon icon={faShower} size="2x" className="text-[#083199]" />
+        <span className="ml-5 text-black">03</span>
+        <div className="absolute inset-y-0 right-0 flex items-center pr-2">
+          <span className="text-[#083199] ">|</span>
+        </div>
+      </div>
+      <div className="flex items-center relative">
+        <FontAwesomeIcon icon={faCar} size="2x" className="text-[#083199]" />
+        <span className="ml-5 text-black">02</span>
+      </div>
+    </div>
 
       <h2 className="lg:px-10 mt-20 font-poppin text-1xl font-bold tracking-tight text-black sm:text-3xl sm:leading-none">
         Description
@@ -164,9 +193,10 @@ export default function HouseItem() {
       </div>
       
       <Streetview />
+      <OurProperties />
+      <Footer/>
 
 
-    <OurProperties/>
 
       <div className="flex flex-col lg:flex-row justify-between items-start lg:space-x-10 mt-10">
         <div className="w-full lg:w-1/2"></div>
