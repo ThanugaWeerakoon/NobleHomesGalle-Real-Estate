@@ -13,8 +13,6 @@ import "swiper/css/navigation";
 
 import Streetview from "../Itempage/Streetview";
 import OurProperties from "./OurProperties";
-<<<<<<< HEAD
-=======
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -22,7 +20,6 @@ import {
   faShower,
   faCar,
 } from "@fortawesome/free-solid-svg-icons";
->>>>>>> origin/HouseItem
 import Footer from "../../Components/Footer";
 
 export default function HouseItem() {
@@ -205,13 +202,7 @@ export default function HouseItem() {
       </div>
 
       <Streetview />
-<<<<<<< HEAD
-
       <OurProperties />
-
-=======
-      <OurProperties />
->>>>>>> origin/HouseItem
       <Footer />
 
       <div className="flex flex-col lg:flex-row justify-between items-start lg:space-x-10 mt-10">
