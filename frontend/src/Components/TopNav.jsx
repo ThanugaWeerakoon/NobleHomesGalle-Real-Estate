@@ -106,6 +106,17 @@ const TopNav = () => {
           Contact
         </a>
       </Typography>
+
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="houseItem" className="flex items-center">
+          HouseItem
+        </a>
+      </Typography>
     </ul>
   );
 

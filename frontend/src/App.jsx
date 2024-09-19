@@ -6,6 +6,7 @@ import AboutUs from './Pages/AboutUs/AboutUs';
 import Contact from './Pages/Contact/Contact';
 import Land from './Pages/Land/Land';
 import House from './Pages/House/House';
+import HouseItem from './Pages/Itempage/HouseItem';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/land" element={<Land />} />
           <Route path='/house' element={<House/>}/>
+          <Route path='/houseItem' element={<HouseItem/>}/>
         </Routes>
       </BrowserRouter>
     </>
