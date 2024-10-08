@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -19,9 +19,9 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center h-auto bg-[#6F97FF] p-4">
         <div className="text-left">
           <h2 className="lg:px-10 font-moul text-1xl font-bold tracking-tight text-white sm:text-3xl sm:leading-none">
-            Homescape
+            Noble
             <span className="tracking-[.25em]">
-              <br /> Haven
+              <br /> Homes
             </span>
           </h2>
           <h2 className="lg:px-10 mt-5 font-moul text-1xl font-medium tracking-tight text-white sm:text-1xl sm:leading-none">
