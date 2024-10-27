@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import {
   Navbar,
-  MobileNav,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
@@ -134,14 +132,6 @@ const TopNav = () => {
           <div className="flex-grow lg:flex lg:justify-center lg:items-center">
             <div className="mr-4 hidden lg:block">{navList}</div>
           </div>
-          <div className="flex items-center gap-x-1">
-            <Button variant="text" size="sm" className="hidden lg:inline-block">
-              <span>Log In</span>
-            </Button>
-            <Button variant="text" size="sm" className="hidden lg:inline-block">
-              <span>Sign In</span>
-            </Button>
-          </div>
           <IconButton
             variant="text"
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -180,17 +170,6 @@ const TopNav = () => {
             )}
           </IconButton>
         </div>
-        <MobileNav open={openNav}>
-          {navList}
-          <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm">
-              <span>Log In</span>
-            </Button>
-            <Button fullWidth variant="gradient" size="sm">
-              <span>Sign In</span>
-            </Button>
-          </div>
-        </MobileNav>
       </Navbar>
     </div>
   );

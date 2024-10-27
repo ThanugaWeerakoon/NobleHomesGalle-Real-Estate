@@ -9,7 +9,6 @@ import House from "./Pages/House/House";
 import HouseItem from "./Pages/Itempage/HouseItem";
 import FilterPage from "./Pages/Filterpage/House";
 import HideNavAndFooter from "./Components/HideNavAndFooter";
-import AdminPannal from "./Admin/Pages/AdminPannal";
 
 function App() {
   return (
@@ -29,8 +28,6 @@ function App() {
           <Route path="/houseItem" element={<HouseItem />} />
 
           <Route path="/filter" element={<FilterPage />} />
-          <Route path="/admin" element={<AdminPannal />} />
-          {/* <Route path="/overview" element={<Overview />} /> */}
         </Routes>
       </BrowserRouter>
     </>
