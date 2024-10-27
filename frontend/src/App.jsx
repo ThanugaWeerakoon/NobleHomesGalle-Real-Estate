@@ -5,15 +5,11 @@ import { Home } from "./Pages/Home/Home";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Contact from "./Pages/Contact/Contact";
 import Land from "./Pages/Land/Land";
-import Sample from "./Pages/Land/Sample";
-
 import House from "./Pages/House/House";
 import HouseItem from "./Pages/Itempage/HouseItem";
-
 import FilterPage from "./Pages/Filterpage/House";
 import HideNavAndFooter from "./Components/HideNavAndFooter";
 import AdminPannal from "./Admin/Pages/AdminPannal";
-import Overview from "./Admin/Pages/Overview";
 
 function App() {
   return (
