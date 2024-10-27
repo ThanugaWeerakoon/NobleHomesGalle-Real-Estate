@@ -32,7 +32,7 @@ export default function HouseItem() {
 
   return (
     <div>
-      <div className="mx-10">
+      {/* <div className="mx-10">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -62,8 +62,38 @@ export default function HouseItem() {
             <img src={land} alt="Slide 5" />
           </SwiperSlide>
         </Swiper>
-      </div>
-
+      </div> */}
+<div className="mx-10 mt-10">
+  <Swiper
+    spaceBetween={30}
+    centeredSlides={true}
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+    pagination={{ clickable: true }}
+    navigation={true}
+    loop={true}
+    modules={[Autoplay, Pagination, Navigation]}
+    className="mySwiper"
+  >
+    <SwiperSlide>
+      <img src={home} alt="Slide 1" className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src={house} alt="Slide 2" className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src={house1} alt="Slide 3" className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src={house2} alt="Slide 4" className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src={land} alt="Slide 5" className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover" />
+    </SwiperSlide>
+  </Swiper>
+</div>
       <h2 className="lg:px-10 mt-20 font-poppin text-1xl font-bold tracking-tight text-black sm:text-2xl sm:leading-none">
         COLOMBO, SRI LANKA
       </h2>

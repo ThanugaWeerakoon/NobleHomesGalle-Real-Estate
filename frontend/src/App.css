@@ -1,3 +1,36 @@
 html {
     scroll-behavior: smooth;
   }
+
+  /* .swiperImage {
+    width: 100%;
+    margin-top: 3%;
+    height: 900px; 
+    object-fit: cover;
+  } */
+
+  /* Add this CSS to your stylesheet */
+/* .responsiveImage {
+  width: 100%;
+  margin-top: 10%;
+  height: 50vh; 
+  object-fit: cover;
+}
+
+@media (min-width: 640px) {
+  .responsiveImage {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsiveImage {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsiveImage {
+    height: 80vh;
+  }
+} */
