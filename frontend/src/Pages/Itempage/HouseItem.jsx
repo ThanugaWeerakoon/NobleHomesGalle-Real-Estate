@@ -10,7 +10,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import { useParams } from 'react-router-dom';
 import Streetview from "../Itempage/Streetview";
 import OurProperties from "./OurProperties";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,7 +29,7 @@ export default function HouseItem() {
     email: "",
     message: "",
   });
-
+  const { id } = useParams();
   return (
     <div>
       <div className="mx-10">
