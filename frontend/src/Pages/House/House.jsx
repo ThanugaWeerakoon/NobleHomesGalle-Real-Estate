@@ -7,6 +7,7 @@ import img4 from "../../assests/Land/land4.png";
 import img5 from "../../assests/Land/land5.png";
 import img6 from "../../assests/Land/land6.jpeg";
 import { FaHome } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import {
   Card,
   CardHeader,
@@ -17,6 +18,7 @@ import {
 } from "@material-tailwind/react";
 import PropertySearch from "../../Components/PropertySearch";
 const House = () => {
+  const navigate = useNavigate();
   const properties = [
     {
       img: img1,
@@ -61,7 +63,9 @@ const House = () => {
       price: "Rs.50,000,000",
     },
   ];
-
+  const handleNavigate = (id) => {
+    navigate(`/house/${id}`);
+  };
   return (
     <div>
       <div
@@ -168,18 +172,17 @@ const House = () => {
                 </div>
               </CardBody>
               <CardFooter className="pt-0">
-                <Button
-                  ripple={false}
-                  fullWidth={true}
-                  className="p-3 bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:scale-105 hover:shadow-none focus:bg-blue-600 focus:scale-105 focus:shadow-none active:bg-blue-700 active:scale-100 rounded-none normal-case flex items-center justify-center"
-                >
-                  <div className="flex flex-col items-center sm:flex-row sm:items-center">
-                    <span className="text-base sm:text-lg">Total Price</span>
-                    <span className="text-2xl sm:ml-2 sm:mt-0 mt-1">
-                      {property.price}
-                    </span>
-                  </div>
-                </Button>
+              <Button
+              ripple={false}
+              fullWidth={true}
+              className="p-3 bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:scale-105"
+              onClick={() => handleNavigate(property.id)}
+            >
+              <div className="flex flex-col items-center sm:flex-row sm:items-center">
+                <span className="text-base sm:text-lg">Total Price</span>
+                <span className="text-2xl sm:ml-2 sm:mt-0 mt-1">{property.price}</span>
+              </div>
+            </Button>
               </CardFooter>
             </Card>
           ))}
