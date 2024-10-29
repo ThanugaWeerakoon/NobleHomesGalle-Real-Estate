@@ -21,6 +21,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination } from "swiper/modules";
 import "../AboutUs/styles.css";
+import Footer from "../../Components/Footer";
 
 const AboutUs = () => {
   const works = [
@@ -383,6 +384,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

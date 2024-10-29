@@ -17,6 +17,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 import PropertySearch from "../../Components/PropertySearch";
+import Footer from "../../Components/Footer";
 const House = () => {
   const navigate = useNavigate();
   const properties = [
@@ -199,6 +200,7 @@ const House = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

@@ -16,6 +16,7 @@ import img3 from "../../assests/Land/land3.jpeg";
 import img4 from "../../assests/Land/land4.png";
 import img5 from "../../assests/Land/land5.png";
 import img6 from "../../assests/Land/land6.jpeg";
+import Footer from "../../Components/Footer";
 
 const Land = () => {
   const allProperties = [
@@ -230,6 +231,7 @@ const Land = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

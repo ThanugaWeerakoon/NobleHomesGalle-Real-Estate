@@ -1,4 +1,5 @@
 
+import Footer from "../../Components/Footer";
 import { ContactBackground } from "./ContactBackground"
 import { ContactPageDown } from "./ContactPageDown"
 
@@ -8,6 +9,7 @@ const Contact = () => {
     <div className="" id="Contact">
     <ContactBackground/>
     <ContactPageDown/>
+    <Footer/>
 </div>
     
   )
