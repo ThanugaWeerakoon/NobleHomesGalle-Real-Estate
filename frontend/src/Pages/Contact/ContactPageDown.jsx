@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactPageDown = () => {
   const [formData, setFormData] = useState({
@@ -17,8 +18,31 @@ export const ContactPageDown = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here, such as sending the data to an API
-    console.log("Form submitted:", formData);
+
+    // Send email using EmailJS
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID", // Replace with your service ID
+        "YOUR_TEMPLATE_ID", // Replace with your template ID
+        formData,
+        "YOUR_USER_ID" // Replace with your user ID
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully!", response.status, response.text);
+          alert("Your message was sent successfully!");
+        },
+        (error) => {
+          console.error("Failed to send email:", error);
+          alert("An error occurred. Please try again.");
+        }
+      );
+
+    // Open WhatsApp to share details
+    const whatsappMessage = `Hello! Here are the details:\n\nName: ${formData.name}\nSubject: ${formData.subject}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
+    const whatsappURL = `https://wa.me/WHATSAPP_NUMBER?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappURL, "_blank");
   };
 
   return (
@@ -33,7 +57,7 @@ export const ContactPageDown = () => {
         <h2 className="mt-6 ml-10 font-sans text-1xl font-small tracking-tight text-[#7B7B7B] sm:text-2xl sm:leading-none">
           Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
           aspernatur aut odit aut fugit, sed quia consequuntur. Dicta sunt
-          explicabo. Nemo enim ipsam voluptatem quia voluptas.{" "}
+          explicabo. Nemo enim ipsam voluptatem quia voluptas.
         </h2>
       </div>
 
@@ -49,9 +73,7 @@ export const ContactPageDown = () => {
               marginWidth="0"
               src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=07%20R.G.%20Senanayake%20Mawatha,%20Colombo%2000700+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               title="Google Maps"
-            >
-              <a href="https://www.gps.ie/">gps systems</a>
-            </iframe>
+            ></iframe>
           </div>
         </div>
 
@@ -74,8 +96,6 @@ export const ContactPageDown = () => {
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               />
             </div>
-
-            <div className="w-full lg:w-1/2 mt-10 lg:mt-0"></div>
 
             <div>
               <label
