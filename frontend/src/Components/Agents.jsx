@@ -1,19 +1,18 @@
-import React from 'react';
-import client1 from "../assests/images/client1.png";
-import client2 from "../assests/images/client2.png";
+import kanchana from '../assests/agent/kanchana.jpg';
+import gallage from '../assests/agent/gallage.jpg';
 
 const Agents = () => {
   const clients = [
     {
       id: 1,
-      img: client1,
-      title: "Tom Wilson",
+      img: gallage,
+      title: "Tilak Gallage",
       description: "Marketing",
     },
     {
       id: 2,
-      img: client2,
-      title: "Lilly Potter",
+      img: kanchana,
+      title: "Kanchana Lakmal",
       description: "Service Supporter",
     },
   ];
