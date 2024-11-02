@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import hero from "../../assests/Filter/bg.png";
 import { FaHome, FaBed, FaBath } from "react-icons/fa";
 import {

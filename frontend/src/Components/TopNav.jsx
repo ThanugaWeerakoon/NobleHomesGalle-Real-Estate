@@ -127,7 +127,7 @@ const TopNav = () => {
             href="#"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
-            NobleHomes
+            NobleHome Galle
           </Typography>
           <div className="flex-grow lg:flex lg:justify-center lg:items-center">
             <div className="mr-4 hidden lg:block">{navList}</div>

@@ -19,9 +19,9 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center h-auto bg-[#6F97FF] p-4">
         <div className="text-left">
           <h2 className="lg:px-10 font-moul text-1xl font-bold tracking-tight text-white sm:text-3xl sm:leading-none">
-            Noble
+          NobleHome
             <span className="tracking-[.25em]">
-              <br /> Homes
+              <br /> Galle
             </span>
           </h2>
           <h2 className="lg:px-10 mt-5 font-moul text-1xl font-medium tracking-tight text-white sm:text-1xl sm:leading-none">
@@ -117,7 +117,7 @@ const Footer = () => {
           </h2>
           <br />
           <h2 className="lg:px-10 font-moul text-1xl font-bold tracking-tight text-white sm:text-3xl sm:leading-none">
-            +(62)21 2002-2012
+            +(94) 77 835 4380
           </h2>
           <br />
           <h2 className="lg:px-10 font-moul text-1xl font-bold tracking-tight text-white sm:text-1xl sm:leading-none">
@@ -125,7 +125,7 @@ const Footer = () => {
           </h2>
           <br />
           <h2 className="lg:px-10 font-moul text-1xl font-bold tracking-tight text-white sm:text-3xl sm:leading-none">
-            Hello@domain.com
+          noblehomegalle15@gmail.com
           </h2>
           <br />
         </div>
