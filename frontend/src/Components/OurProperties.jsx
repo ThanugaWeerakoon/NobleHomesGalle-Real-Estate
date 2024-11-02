@@ -16,8 +16,8 @@ const OurProperties = () => {
   return (
     <div className="w-full p-6 ">
       <div className="flex flex-col items-center justify-center h-full">
-        <h1 className="font-medium">Our Properties</h1>
-        <p>Best Properties</p>
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold font-poppins text-center uppercase">Our Properties</h1>
+        <p className="text-md font-semibold font-poppins text-[#6F97FF] uppercase">Best Properties</p>
       </div>
       <div className="grid grid-cols-1 gap-10 m-10 md:grid-cols-2 lg:grid-cols-3">
         <Card className="w-full">

@@ -1,4 +1,3 @@
-import React from 'react'
 import building from "../assests/images/building.png";
 
 const Dream = () => {

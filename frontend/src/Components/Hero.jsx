@@ -19,12 +19,13 @@ export const Hero = () => {
       </div>
       <div className="px-4 py-16 mx-auto w-full sm:px-24 lg:px-8 lg:py-20">
         <div className="relative w-full max-w-2xl mx-auto text-center">
-          <h2 className="mt-20 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+          <h2 className="mt-20 font-sans text-3xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none leading-relaxed">
             Find Your New Property Today
             <br className="hidden md:block" />
             With Us.{" "}
           </h2>
-          <p className="mb-6 mt-16 text-base text-indigo-100 md:text-lg">
+
+          <p className="mb-6 mt-16 text-lg font-bold text-indigo-100 md:text-xl">
             Finding the home, commercial, or office you’ll love to rent or buy
             just got easier.
           </p>
@@ -46,7 +47,7 @@ export const Hero = () => {
           </a>
         </div>
       </div>
-      
+
       <PropertySearch />
     </div>
   );

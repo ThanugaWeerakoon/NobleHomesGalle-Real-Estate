@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 const provinces = [
   "Central Province",
@@ -59,7 +59,6 @@ const PropertySearch = ({ onSearch }) => {
             </option>
             <option>House</option>
             <option>Land</option>
-            <option>Apartment</option>
           </select>
 
           <select
