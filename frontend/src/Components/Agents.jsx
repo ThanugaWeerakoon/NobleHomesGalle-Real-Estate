@@ -7,13 +7,13 @@ const Agents = () => {
       id: 1,
       img: gallage,
       title: "Tilak Gallage",
-      description: "Marketing",
+      description: "Sales Manager",
     },
     {
       id: 2,
       img: kanchana,
       title: "Kanchana Lakmal",
-      description: "Service Supporter",
+      description: "Marketing Coordinator",
     },
   ];
 
