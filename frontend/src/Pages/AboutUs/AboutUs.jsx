@@ -83,7 +83,7 @@ const AboutUs = () => {
       text: "We had a fantastic experience with Ashan! He made our family feel  We'll cherish these memories forever.",
       author: "Sarah, CEO of TechCorp",
       authorImage: author1,
-      designation: "CEO, Tech Innovations Inc."
+      designation: "CEO, Tech Innovations Inc.",
     },
     {
       text: "We are so grateful to Ashan for the beautiful  These photos will be treasured for years to come.",
@@ -95,7 +95,7 @@ const AboutUs = () => {
       text: "Ashan's creativity and attention to detail were evident in every shot. He captured our special day perfectly,  results.",
       author: "Michael & Laura",
       authorImage: author1,
-      designation: "CEO, Tech Innovations Inc."
+      designation: "CEO, Tech Innovations Inc.",
     },
   ];
 
@@ -129,9 +129,13 @@ const AboutUs = () => {
                 Our Vision
               </h2>
               <p className="text-[#535353] mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                To redefine real estate excellence by creating spaces that
+                inspire and uplift. We envision a future where every client
+                finds their ideal property seamlessly, with a commitment to
+                quality, integrity, and personalized service. At NobleHome, we
+                aim to set new standards in the real estate industry, making
+                each client’s journey to their dream property an extraordinary
+                experience.
               </p>
             </div>
 
@@ -140,9 +144,13 @@ const AboutUs = () => {
                 Our Mission
               </h2>
               <p className="text-[#535353]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Our mission is to provide exceptional real estate services by
+                focusing on our clients’ unique needs and aspirations. We are
+                dedicated to building lasting relationships, offering expert
+                guidance, and ensuring transparency in every transaction. With a
+                passion for quality and a drive for innovation, NobleHome is
+                committed to helping individuals and businesses find properties
+                that truly reflect their goals and lifestyles.
               </p>
             </div>
           </div>
@@ -335,7 +343,6 @@ const AboutUs = () => {
                 },
               }}
             >
-             
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
                   <div className="  rounded-[40px] shadow-lg p-8 m-4 relative flex flex-col items-start">
@@ -384,7 +391,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
