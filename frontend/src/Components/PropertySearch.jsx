@@ -47,11 +47,11 @@ const PropertySearch = ({ onSearch }) => {
   return (
     <div className="flex justify-center p-6">
       <div className="rounded-xl border border-gray-300 bg-white p-8 shadow-lg w-full max-w-3xl">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">Search Properties</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Search Properties</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <select
             id="property-type"
-            className="block w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className="block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
             value={propertyType}
             onChange={(e) => setPropertyType(e.target.value)}
           >
@@ -64,7 +64,7 @@ const PropertySearch = ({ onSearch }) => {
 
           <select
             id="province"
-            className="block w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className="block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
             value={selectedProvince}
             onChange={(e) => setSelectedProvince(e.target.value)}
           >
@@ -80,7 +80,7 @@ const PropertySearch = ({ onSearch }) => {
 
           <select
             id="city"
-            className="block w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
+            className="block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
             value={selectedCity}
             onChange={(e) => setSelectedCity(e.target.value)}
           >
@@ -102,7 +102,7 @@ const PropertySearch = ({ onSearch }) => {
               type="text"
               id="min-price"
               placeholder="Min Sales Price"
-              className="mt-1 block w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
               value={minPrice}
               onChange={(e) => setMinPrice(e.target.value)}
             />
@@ -110,13 +110,13 @@ const PropertySearch = ({ onSearch }) => {
 
           <div className="flex flex-col">
             <label htmlFor="max-price" className="text-gray-600 text-sm font-medium mb-1">
- Max Sales Price
+              Max Sales Price
             </label>
             <input
               type="text"
               id="max-price"
               placeholder="Max Sales Price"
-              className="mt-1 block w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-4 py-3 shadow -sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
               value={maxPrice}
               onChange={(e) => setMaxPrice(e.target.value)}
             />
@@ -124,7 +124,7 @@ const PropertySearch = ({ onSearch }) => {
 
           <div className="mt-6 flex justify-end">
             <button
-              className="active:scale-95 rounded-lg bg-blue-600 px-6 py-2 font-medium text-white outline-none focus:ring hover:opacity-90"
+              className="active:scale-95 rounded-lg bg-blue-600 px-6 py-3 font-bold text-white outline-none focus:ring hover:opacity-90 transition duration-200 ease-in-out"
               onClick={handleSearch}
             >
               Search
