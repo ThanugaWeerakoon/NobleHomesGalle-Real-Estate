@@ -35,7 +35,7 @@ export const ContactBackground = () => {
                 EMAIL
               </h2>
               <h2 className="mt-6 font-sans text-3xl font-small tracking-tight text-black sm:text-2xl sm:leading-none">
-                homeescape@gmail.com
+              noblehomegalle15@gmail.com
               </h2>
             </div>
 
@@ -44,7 +44,7 @@ export const ContactBackground = () => {
                 PHONE NO
               </h2>
               <h2 className="mt-6 font-sans text-3xl font-small tracking-tight text-black sm:text-2xl sm:leading-none">
-                +94 222 281 5
+              +(94) 77 835 4380
               </h2>
             </div>
 
