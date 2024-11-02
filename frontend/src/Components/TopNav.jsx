@@ -68,17 +68,7 @@ const TopNav = () => {
                 Land
               </Link>
             </li>
-            <li>
-              <Link
-                to="/house"
-                className="block p-2 hover:bg-gray-200"
-                onClick={() => {
-                  setDropdownOpen(false); 
-                }}
-              >
-                House
-              </Link>
-            </li>
+            
           </ul>
         )}
       </li>

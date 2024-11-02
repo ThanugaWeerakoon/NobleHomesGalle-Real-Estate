@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 
 const provinces = [
   "Central Province",
@@ -45,16 +45,17 @@ const PropertySearch = ({ onSearch }) => {
   };
 
   return (
-    <div className="relative flex justify-center h-60">
-      <div className="rounded-xl border border-gray-200 bg-white p-10 shadow-lg ">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+    <div className="flex justify-center p-6">
+      <div className="rounded-xl border border-gray-300 bg-white p-8 shadow-lg w-full max-w-3xl">
+        <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">Search Properties</h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <select
             id="property-type"
-            className="block w-full rounded-md border border-gray-200 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+            className="block w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
             value={propertyType}
             onChange={(e) => setPropertyType(e.target.value)}
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               Property Type
             </option>
             <option>House</option>
@@ -63,11 +64,11 @@ const PropertySearch = ({ onSearch }) => {
 
           <select
             id="province"
-            className="block w-full rounded-md border border-gray-200 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+            className="block w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
             value={selectedProvince}
             onChange={(e) => setSelectedProvince(e.target.value)}
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               Province
             </option>
             {provinces.map((province) => (
@@ -79,11 +80,11 @@ const PropertySearch = ({ onSearch }) => {
 
           <select
             id="city"
-            className="block w-full rounded-md border border-gray-200 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+            className="block w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
             value={selectedCity}
             onChange={(e) => setSelectedCity(e.target.value)}
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               City
             </option>
             {cities.map((city) => (
@@ -93,35 +94,29 @@ const PropertySearch = ({ onSearch }) => {
             ))}
           </select>
 
-          <div className="flex flex-col col-span-1">
-            <label
-              htmlFor="min-price"
-              className="text-stone-600 text-sm font-medium"
-            >
+          <div className="flex flex-col">
+            <label htmlFor="min-price" className="text-gray-600 text-sm font-medium mb-1">
               Min Sales Price
             </label>
             <input
               type="text"
               id="min-price"
               placeholder="Min Sales Price"
-              className="mt-2 block w-full rounded-md border border-gray-200 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
               value={minPrice}
               onChange={(e) => setMinPrice(e.target.value)}
             />
           </div>
 
-          <div className="flex flex-col col-span-1">
-            <label
-              htmlFor="max-price"
-              className="text-stone-600 text-sm font-medium"
-            >
-              Max Sales Price
+          <div className="flex flex-col">
+            <label htmlFor="max-price" className="text-gray-600 text-sm font-medium mb-1">
+ Max Sales Price
             </label>
             <input
               type="text"
               id="max-price"
               placeholder="Max Sales Price"
-              className="mt-2 block w-full rounded-md border border-gray-200 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+              className="mt-1 block w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200"
               value={maxPrice}
               onChange={(e) => setMaxPrice(e.target.value)}
             />
@@ -129,7 +124,7 @@ const PropertySearch = ({ onSearch }) => {
 
           <div className="mt-6 flex justify-end">
             <button
-              className="active:scale-95 rounded-lg bg-blue-600 px-14 py-2 font-medium text-white outline-none focus:ring hover:opacity-90"
+              className="active:scale-95 rounded-lg bg-blue-600 px-6 py-2 font-medium text-white outline-none focus:ring hover:opacity-90"
               onClick={handleSearch}
             >
               Search
