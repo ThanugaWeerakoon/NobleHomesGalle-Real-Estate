@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import properties from '../../data/properties'; 
 import PropertySearch from '../../Components/PropertySearch'; 
+import Footer from "../../Components/Footer"
 
 const Land = () => {
   const [propertyType, setPropertyType] = useState("");
@@ -34,8 +35,8 @@ const Land = () => {
   const filteredProperties = handleSearch();
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center text-black">Properties for Sale</h1>
+    <div className="mx-auto">
+      <h1 className="text-3xl font-bold mb-6 text-center text-black mt-9">Properties for Sale</h1>
       <div className="mb-6">
         <PropertySearch onSearch={(filters) => {
           setPropertyType(filters.propertyType);
