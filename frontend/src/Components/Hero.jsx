@@ -7,6 +7,7 @@ export const Hero = () => {
       className="relative w-90 h-90 bg-cover bg-center"
       style={{ backgroundImage: `url(${home})` }}
     >
+      <div class="absolute inset-0 bg-gray-800 opacity-50"></div>
       <div className="absolute inset-x-0 bottom-0">
         <svg
           viewBox="0 0 224 12"
@@ -25,7 +26,7 @@ export const Hero = () => {
             With Us.{" "}
           </h2>
 
-          <p className="mb-6 mt-16 text-lg font-bold text-indigo-100 md:text-xl">
+          <p className="mb-6 mt-16 text-lg font-bold text-white md:text-xl">
             Finding the home, commercial, or office you’ll love to rent or buy
             just got easier.
           </p>
