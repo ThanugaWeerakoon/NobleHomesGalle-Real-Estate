@@ -1,4 +1,4 @@
-import contact from "../../assests/Contact/contact.jpg"
+import contact from "../../assests/Filter/house4.png"
 
 
 export const ContactBackground = () => {
@@ -7,6 +7,7 @@ export const ContactBackground = () => {
       className="relative w-full h-full bg-cover bg-center bg-[#484848]"
       style={{ backgroundImage: `url(${contact})` }}
     >
+         <div class="absolute inset-0 bg-gray-800 opacity-50"></div>
       <div className="absolute inset-x-0 bottom-0">
         <svg
           viewBox="0 0 224 12"
@@ -20,8 +21,8 @@ export const ContactBackground = () => {
 
       <div className="px-4 py-16 mx-auto w-full sm:px-24 lg:px-8 lg:py-20">
         <div className="relative w-full max-w-2xl mx-auto text-center">
-          <h2 className="mt-20 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-            Contact
+          <h2 className="mt-20 font-sans text-3xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none leading-relaxed">
+            CONTACT
           </h2>
         </div>
       </div>

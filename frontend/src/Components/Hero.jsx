@@ -1,5 +1,4 @@
 import home from "../assests/Home/home.jpg";
-import PropertySearch from "./PropertySearch";
 
 export const Hero = () => {
   return (
