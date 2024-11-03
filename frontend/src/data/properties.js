@@ -90,7 +90,7 @@ const properties = [
     purches: "0 Purches",
     price: "LKR 55,000,000",
     id: 8,
-    city: "Midigama",
+    city: "Galle",
     propertyType: "House", 
   },
 

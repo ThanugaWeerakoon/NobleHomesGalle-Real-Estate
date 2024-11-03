@@ -7,7 +7,6 @@ import Contact from "./Pages/Contact/Contact";
 import Land from "./Pages/Land/Land";
 
 import HouseItem from "./Pages/Itempage/HouseItem";
-import FilterPage from "./Pages/Filterpage/House";
 import HideNavAndFooter from "./Components/HideNavAndFooter";
 
 function App() {
@@ -23,10 +22,9 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/land" element={<Land />} />
-
           <Route path="/houseItem" element={<HouseItem />} />
 
-          <Route path="/filter" element={<FilterPage />} />
+          
         </Routes>
       </BrowserRouter>
     </>
