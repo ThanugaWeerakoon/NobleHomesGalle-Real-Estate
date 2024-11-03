@@ -29,7 +29,11 @@ export const ContactPageDown = () => {
       )
       .then(
         (response) => {
-          console.log("Email sent successfully!", response.status, response.text);
+          console.log(
+            "Email sent successfully!",
+            response.status,
+            response.text
+          );
           alert("Your message was sent successfully!");
         },
         (error) => {
@@ -40,7 +44,9 @@ export const ContactPageDown = () => {
 
     // Open WhatsApp to share details
     const whatsappMessage = `Hello! Here are the details:\n\nName: ${formData.name}\nSubject: ${formData.subject}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
-    const whatsappURL = `https://wa.me/WHATSAPP_NUMBER?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappURL = `https://wa.me/WHATSAPP_NUMBER?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
 
     window.open(whatsappURL, "_blank");
   };
@@ -55,9 +61,12 @@ export const ContactPageDown = () => {
 
       <div className="lg:px-10 lg:py-5">
         <h2 className="mt-6 ml-10 font-sans text-1xl font-small tracking-tight text-[#7B7B7B] sm:text-2xl sm:leading-none">
-          Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur. Dicta sunt
-          explicabo. Nemo enim ipsam voluptatem quia voluptas.
+          Let’s bring your vision to life with innovative, tailored solutions.
+          At NobleHome, we’re dedicated to creating exceptional spaces that meet
+          your unique needs and aspirations. Whether it’s a new home, an office
+          space, or a commercial property, we’re here to guide you every step of
+          the way. Together, let’s turn ideas into reality and build something
+          remarkable.
         </h2>
       </div>
 
