@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import properties from '../../data/properties'; // Adjust the path as necessary
-import PropertySearch from '../../Components/PropertySearch'; // Adjust the path as necessary
+import properties from '../../data/properties'; 
+import PropertySearch from '../../Components/PropertySearch'; 
 
 const Land = () => {
   const [propertyType, setPropertyType] = useState("");
@@ -11,7 +11,7 @@ const Land = () => {
 
   const handleSearch = () => {
     const filteredProperties = properties.filter((property) => {
-      const priceValue = parseInt(property.price.replace(/[^\d]/g, ''), 10); // Convert price to number
+      const priceValue = parseInt(property.price.replace(/[^\d]/g, ''), 10); // Convert price to number//
 
       const matchesPropertyType = propertyType ? property.propertyType === propertyType : true;
       const matchesProvince = selectedProvince ? property.province === selectedProvince : true;
@@ -35,7 +35,7 @@ const Land = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center text-blue-600">Properties for Sale</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center text-black">Properties for Sale</h1>
       <div className="mb-6">
         <PropertySearch onSearch={(filters) => {
           setPropertyType(filters.propertyType);
