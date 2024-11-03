@@ -48,7 +48,8 @@ export const Hero = () => {
         </div>
       </div>
 
-      <PropertySearch />
+     
     </div>
+   
   );
 };

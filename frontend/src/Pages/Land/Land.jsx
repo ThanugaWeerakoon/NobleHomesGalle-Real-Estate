@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import properties from '../../data/properties'; // Adjust the path as necessary
-import PropertySearch from '../../Components/PropertySearch'; // Adjust the path as necessary
-
+import properties from '../../data/properties'; 
+import PropertySearch from '../../Components/PropertySearch';
+import Footer from "../../Components/Footer"
 const Land = () => {
   const [propertyType, setPropertyType] = useState("");
   const [selectedProvince, setSelectedProvince] = useState("");
@@ -11,7 +11,7 @@ const Land = () => {
 
   const handleSearch = () => {
     const filteredProperties = properties.filter((property) => {
-      const priceValue = parseInt(property.price.replace(/[^\d]/g, ''), 10); // Convert price to number
+      const priceValue = parseInt(property.price.replace(/[^\d]/g, ''), 10); 
 
       const matchesPropertyType = propertyType ? property.propertyType === propertyType : true;
       const matchesProvince = selectedProvince ? property.province === selectedProvince : true;
@@ -34,7 +34,7 @@ const Land = () => {
   const filteredProperties = handleSearch();
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="mx-auto">
       <h1 className="text-3xl font-bold mb-6 text-center text-blue-600">Properties for Sale</h1>
       <div className="mb-6">
         <PropertySearch onSearch={(filters) => {
@@ -46,7 +46,7 @@ const Land = () => {
         }} />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-9">
         {filteredProperties.length > 0 ? (
           filteredProperties.map((property) => (
             <div key={property.id} className="border border-gray-300 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
@@ -65,7 +65,10 @@ const Land = () => {
           </div>
         )}
       </div>
+      
+      <Footer/>
     </div>
+    
   );
 };
 
