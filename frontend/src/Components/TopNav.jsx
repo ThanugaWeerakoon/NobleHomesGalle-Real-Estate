@@ -32,46 +32,18 @@ const TopNav = () => {
         </a>
       </Typography>
 
-      <li className="relative">
-        <button
-          onClick={() => {
-            setDropdownOpen(!dropdownOpen);
-          }}
-          className="flex items-center p-1 font-normal text-blue-gray"
-        >
-          Property
-          <svg
-            className={`ml-5 h-4 w-4 transform ${
-              dropdownOpen ? "rotate-180" : ""
-            }`}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 9l6 6 6-6"
-            />
-          </svg>
-        </button>
-        {dropdownOpen && (
-          <ul className="absolute mt-2 bg-white shadow-lg rounded-lg w-40 z-50">
-            <li>
-              <Link
-                to="/land"
-                className="block p-2 hover:bg-gray-200"
-                onClick={() => {
-                  setDropdownOpen(false); 
-                }}
-              >
-                Land
-              </Link>
-            </li>
-            
-          </ul>
-        )}
-      </li>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="land" className="flex items-center">
+          Properties
+        </a>
+      </Typography>
+
+      
 
       <Typography
         as="li"
@@ -95,16 +67,7 @@ const TopNav = () => {
         </a>
       </Typography>
 
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="houseItem" className="flex items-center">
-          HouseItem
-        </a>
-      </Typography>
+      
     </ul>
   );
 
