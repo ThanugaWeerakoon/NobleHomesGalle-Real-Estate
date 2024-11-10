@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate for routing
-import properties from '../../data/data';  // Import your properties data
+import { useNavigate } from 'react-router-dom';  
+import properties from '../../data/data'; 
 import PropertySearch from '../../Components/PropertySearch'; 
 import Footer from "../../Components/Footer";
 
@@ -11,7 +11,7 @@ const Land = () => {
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
 
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
 
   const handleSearch = () => {
     const filteredProperties = properties.filter((property) => {
@@ -39,7 +39,7 @@ const Land = () => {
 
   // Function to handle "View More" button click
   const handleViewMore = (propertyId) => {
-    navigate(`/property/${propertyId}`); // Navigate to the property details page
+    navigate(`/property/${propertyId}`); 
   };
 
   return (
@@ -65,9 +65,9 @@ const Land = () => {
                 <p className="text-gray-600">{property.province}, {property.city}</p>
                 <p className="text-gray-500">{property.purches}</p>
                 <p className="font-bold text-blue-600">{property.price}</p>
-                {/* View More Button */}
+               
                 <button
-                  onClick={() => handleViewMore(property.id)} // Redirect to the details page
+                  onClick={() => handleViewMore(property.id)} 
                   className="mt-4 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-700"
                 >
                   View More
