@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import properties from '../../data/properties'; 
+import { useNavigate } from 'react-router-dom';  // Import useNavigate for routing
+import properties from '../../data/data';  // Import your properties data
 import PropertySearch from '../../Components/PropertySearch'; 
-import Footer from "../../Components/Footer"
+import Footer from "../../Components/Footer";
 
 const Land = () => {
   const [propertyType, setPropertyType] = useState("");
@@ -10,9 +11,11 @@ const Land = () => {
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
 
+  const navigate = useNavigate(); // Hook for navigation
+
   const handleSearch = () => {
     const filteredProperties = properties.filter((property) => {
-      const priceValue = parseInt(property.price.replace(/[^\d]/g, ''), 10); // Convert price to number//
+      const priceValue = parseInt(property.price.replace(/[^\d]/g, ''), 10);
 
       const matchesPropertyType = propertyType ? property.propertyType === propertyType : true;
       const matchesProvince = selectedProvince ? property.province === selectedProvince : true;
@@ -33,6 +36,11 @@ const Land = () => {
   };
 
   const filteredProperties = handleSearch();
+
+  // Function to handle "View More" button click
+  const handleViewMore = (propertyId) => {
+    navigate(`/property/${propertyId}`); // Navigate to the property details page
+  };
 
   return (
     <div className="mx-auto">
@@ -57,6 +65,13 @@ const Land = () => {
                 <p className="text-gray-600">{property.province}, {property.city}</p>
                 <p className="text-gray-500">{property.purches}</p>
                 <p className="font-bold text-blue-600">{property.price}</p>
+                {/* View More Button */}
+                <button
+                  onClick={() => handleViewMore(property.id)} // Redirect to the details page
+                  className="mt-4 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-700"
+                >
+                  View More
+                </button>
               </div>
             </div>
           ))
@@ -66,10 +81,9 @@ const Land = () => {
           </div>
         )}
       </div>
-      
-      <Footer/>
+
+      <Footer />
     </div>
-    
   );
 };
 
