@@ -8,7 +8,26 @@ import H7 from "../assests/PropertyType/House/H7/H7.png";
 import H8 from "../assests/PropertyType/House/H8/H8.png";
 import L1 from "../assests/PropertyType/Land/L1/L1.png";
 import L2 from "../assests/PropertyType/Land/L2/L2.png";
-
+import L3 from "../assests/PropertyType/Land/L3/L3.png";
+import L4 from "../assests/PropertyType/Land/L4/L4.png";
+import L5 from "../assests/PropertyType/Land/L5/L5.png";
+import L6 from "../assests/PropertyType/Land/L6/L6.png";
+import L7 from "../assests/PropertyType/Land/L7/L7.png";
+import L8 from "../assests/PropertyType/Land/L8/L8.png";
+import L9 from "../assests/PropertyType/Land/L9/L9.png";
+import L10 from "../assests/PropertyType/Land/L10/L10.png";
+import H9 from "../assests/PropertyType/House/H9/H9.png";
+import H10 from "../assests/PropertyType/House/H10/H10.png";
+import H11 from "../assests/PropertyType/House/H11/H11.png";
+import H12 from "../assests/PropertyType/House/H12/H12.png";
+import H13 from "../assests/PropertyType/House/H13/H13.png";
+import H14 from "../assests/PropertyType/House/H14/H14.png";
+import H15 from "../assests/PropertyType/House/H15/H15.png";
+import H16 from "../assests/PropertyType/House/H16/H16.png";
+import H17 from "../assests/PropertyType/House/H17/H17.png";
+import H18 from "../assests/PropertyType/House/H18/H18.png";
+import H19 from "../assests/PropertyType/House/H19/H19.png";
+import H20 from "../assests/PropertyType/House/H20/H20.png";
 
 const properties = [
   {
@@ -103,7 +122,7 @@ const properties = [
   },
   {
     img: L2,
-    province: "Southern Province",
+    province: "Uva Province",
     town: "Ella - Ambadandegama -17 Acres Bareland ",
     purches: "17 Acres",
     price: "LKR 40,000,000 ",
@@ -111,9 +130,206 @@ const properties = [
     city: " Ella", 
     propertyType: "Land", 
   },
-
-
-
+  {
+    img: L3,
+    province: "Southern Province",
+    town: "Ahangama - 56 Perches Paddy Front Land",
+    purches: "56  Perches",
+    price: "LKR 500,000 ",
+    id: 11,
+    city: " Ahangama", 
+    propertyType: "Land", 
+  },
+  {
+    img: L4,
+    province: "Western Province",
+    town: "Yakkala - Gampaha road - 15 Perch Residential Land",
+    purches: "25 Perches",
+    price: "LKR 1,000,000",
+    id: 12,
+    city: " Yakkala", 
+    propertyType: "Land", 
+  },
+  {
+    img: L5,
+    province: "Southern Province",
+    town: "Matara - Madihe - 47 perches Land Sale Close To Madihe Beach",
+    purches: "47  Perches",
+    price: "LKR 1,300,000",
+    id: 13,
+    city: " Matara", 
+    propertyType: "Land", 
+  },
+  {
+    img: L6,
+    province: " Western Province",
+    town: "Colombo - Mt. Lavinia - 303 perches Residential Land",
+    purches: "303 Perches",
+    price: "LKR 2,500,000",
+    id: 14,
+    city: " Mount Lavinia", 
+    propertyType: "Land", 
+  },
+  {
+    img: L7,
+    province: " Southern Province",
+    town: "Weligama and Mirissa Boundary 120 perch Elevated Land",
+    purches: "120 Perches",
+    price: "LKR 1,800,000",
+    id: 15,
+    city: " Weligama", 
+    propertyType: "Land", 
+  },
+  {
+    img: L8,
+    province: " Southern Province",
+    town: "Galle - Baddegama - 21 Acres Middle Class Tea and Cinnamon Estate",
+    purches: "21 Perches",
+    price: "LKR 6,500,000",
+    id: 16,
+    city: " Wanduramba ", 
+    propertyType: "Land", 
+  },
+  {
+    img: L9,
+    province: " Southern Province",
+    town: "Mirissa- Talaramba-58 perches land",
+    purches: "58  Perches",
+    price: "LKR 1,300,000",
+    id: 17,
+    city: " Kamburugamuwa ", 
+    propertyType: "Land", 
+  },
+  {
+    img: L10,
+    province: " Southern Province",
+    town: "Galle - Kahaduwa watta Junction- 25 perch Bareland Sale. (Second blocks of Baddegama - Galle road)",
+    purches: "25   Perches",
+    price: "LKR 1,700,000",
+    id: 18,
+    city: " galle", 
+    propertyType: "Land", 
+  },
+  {
+    img: H9,
+    province: "Southern Province",
+    town: "Kandy - Kiribathkumbura - 3 Bedrooms House",
+    purches: "17 Perches",
+    price: "LKR 35,000,000",
+    id: 19,
+    city: " Kandy", 
+    propertyType: "House", 
+  },
+  {
+    img: H10,
+    province: "Western Province",
+    town: "Yakkala - Mahavita - A Brand New 2 Stories House",
+    purches: "12.5 Perches",
+    price: "LKR 35,000,000",
+    id: 20,
+    city: " Yakkala", 
+    propertyType: "House", 
+  },
+  {
+    img: H11,
+    province: "Southern Province",
+    town: "Galle - Richmond Hill - A Single Storey House",
+    purches: "20 Perches",
+    price: "LKR 35,000,000",
+    id: 21,
+    city: " Galle", 
+    propertyType: "House", 
+  },
+  {
+    img: H12,
+    province: "Southern Province",
+    town: "Galle - Colonial Bunagalow",
+    purches: "180  Perches",
+    price: "LKR 68,000,000",
+    id: 22,
+    city: " Galle", 
+    propertyType: "House", 
+  },
+  {
+    img: H13,
+    province: "Southern Province",
+    town: "Ahangama - Ahangama - Beach Views House",
+    purches: "20 Perches",
+    price: "LKR 68,000,000",
+    id: 23,
+    city: "Ahangama", 
+    propertyType: "House", 
+  },
+  {
+    img: H14,
+    province: "Southern Province",
+    town: "Weligama - Polwathumodara - River Front Property",
+    purches: "35 Perches",
+    price: "LKR 48,000,000",
+    id: 24,
+    city: "Weligama", 
+    propertyType: "House", 
+  },
+  {
+    img: H15,
+    province: "Southern Province",
+    town: "Galle - Unawatuna Hill - 2 BR, Villa",
+    purches: "36.25 Perches",
+    price: "LKR 48,000,000",
+    id: 25,
+    city: "Galle", 
+    propertyType: "House", 
+  },
+  {
+    img: H16,
+    province: "Southern Province",
+    town: "Hikkaduwa - Pinkanda Road - 5BR - Single Story Villa",
+    purches: "40 Perches",
+    price: "LKR 55,000,000",
+    id: 26,
+    city: "Hikkaduwa", 
+    propertyType: "House", 
+  },
+  {
+    img: H17,
+    province: "Central Province",
+    town: "Peradeniya - Close to University House",
+    purches: "39 Perches",
+    price: "LKR 23,000,000",
+    id: 27,
+    city: "Peradeniya", 
+    propertyType: "House", 
+  },
+  {
+    img: H18,
+    province: "Southern Province",
+    town: "Hambantota - 10BR - A Lake Front Villa",
+    purches: "55 Perches",
+    price: "LKR 60,000,000",
+    id: 28,
+    city: "Hambantota", 
+    propertyType: "House", 
+  },
+  {
+    img: H19,
+    province: "Southern Province",
+    town: "Ahangama - A Single Storey House",
+    purches: "30 Perches",
+    price: "LKR 42,000,000",
+    id: 29,
+    city: "Ahangama", 
+    propertyType: "House", 
+  },
+  {
+    img: H20,
+    province: "Southern Province",
+    town: "Ahangama Ocean View House",
+    purches: "12 Perches",
+    price: "LKR 33,000,000",
+    id: 30,
+    city: "Ahangama", 
+    propertyType: "House", 
+  },
 ];
 
 export default properties;
