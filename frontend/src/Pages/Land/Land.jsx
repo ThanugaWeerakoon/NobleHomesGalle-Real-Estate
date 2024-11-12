@@ -1,27 +1,46 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';  
-import properties from '../../data/data'; 
-import PropertySearch from '../../Components/PropertySearch'; 
+import React, { useEffect, useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { getDocs, collection } from 'firebase/firestore';
+import { db } from '../../../firebase';  // Import the Firestore instance
+import PropertySearch from '../../Components/PropertySearch';
 import Footer from "../../Components/Footer";
 
 const Land = () => {
+  const [properties, setProperties] = useState([]);
   const [propertyType, setPropertyType] = useState("");
   const [selectedProvince, setSelectedProvince] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
 
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
+  
+  const fetchProperties = async () => {
+    try {
+      const propertiesCollection = collection(db, "homes");
+      const propertySnapshot = await getDocs(propertiesCollection);
+      const propertyList = propertySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setProperties(propertyList);
+    } catch (error) {
+      console.error("Error fetching properties:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchProperties();
+  }, []);
+
+ 
   const handleSearch = () => {
-    const filteredProperties = properties.filter((property) => {
-      const priceValue = parseInt(property.price.replace(/[^\d]/g, ''), 10);
+    return properties.filter((property) => {
+      const priceValue = property.price || 0; 
 
       const matchesPropertyType = propertyType ? property.propertyType === propertyType : true;
       const matchesProvince = selectedProvince ? property.province === selectedProvince : true;
       const matchesCity = selectedCity ? property.city === selectedCity : true;
-      const matchesMinPrice = minPrice ? priceValue >= parseInt(minPrice.replace(/[^\d]/g, ''), 10) : true;
-      const matchesMaxPrice = maxPrice ? priceValue <= parseInt(maxPrice.replace(/[^\d]/g, ''), 10) : true;
+      const matchesMinPrice = minPrice ? priceValue >= parseInt(minPrice) : true;
+      const matchesMaxPrice = maxPrice ? priceValue <= parseInt(maxPrice) : true;
 
       return (
         matchesPropertyType &&
@@ -31,15 +50,13 @@ const Land = () => {
         matchesMaxPrice
       );
     });
-
-    return filteredProperties;
   };
 
-  const filteredProperties = handleSearch();
+  const filteredProperties = useMemo(() => handleSearch(), [properties, propertyType, selectedProvince, selectedCity, minPrice, maxPrice]);
 
   // Function to handle "View More" button click
   const handleViewMore = (propertyId) => {
-    navigate(`/property/${propertyId}`); 
+    navigate(`/property/${propertyId}`);
   };
 
   return (
@@ -59,13 +76,11 @@ const Land = () => {
         {filteredProperties.length > 0 ? (
           filteredProperties.map((property) => (
             <div key={property.id} className="border border-gray-300 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-              <img src={property.img} alt={property.town} className="w-full h-48 object-cover" />
+              <img src={property.imageUrls ? property.imageUrls[0] : '/default-image.jpg'} alt={property.town} className="w-full h-48 object-cover" />
               <div className="p-4">
                 <h2 className="font-semibold text-lg text-gray-800">{property.town}</h2>
-                <p className="text-gray-600">{property.province}, {property.city}</p>
-                <p className="text-gray-500">{property.purches}</p>
-                <p className="font-bold text-blue-600">{property.price}</p>
-               
+                <p className="text-gray-600">{property.city}</p>
+                <p className="font-bold text-blue-600">{property.price ? `$${property.price.toLocaleString()}` : "Price not available"}</p>
                 <button
                   onClick={() => handleViewMore(property.id)} 
                   className="mt-4 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-700"
