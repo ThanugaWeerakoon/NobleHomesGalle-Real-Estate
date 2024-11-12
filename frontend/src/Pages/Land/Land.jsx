@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getDocs, collection } from 'firebase/firestore';
-import { db } from '../../../firebase';  // Import the Firestore instance
+import { db } from '../../../firebase';  
 import PropertySearch from '../../Components/PropertySearch';
 import Footer from "../../Components/Footer";
 
