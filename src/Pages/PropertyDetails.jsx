@@ -91,7 +91,7 @@ const PropertyDetails = () => {
             <li><strong>Address:</strong> {property.address}</li>
             <li><strong>City:</strong> {property.city}</li>
             <li><strong>Town:</strong> {property.town}</li>
-            <li><strong>Price:</strong> ₹{property.price}</li>
+            <li><strong>Price:</strong> Rs{property.price}</li>
             <li><strong>Bathrooms:</strong> {property.bathrooms}</li>
             <li><strong>Bedrooms:</strong> {property.bedrooms}</li>
             <li><strong>Floor Area:</strong> {property.floorArea} sqft</li>

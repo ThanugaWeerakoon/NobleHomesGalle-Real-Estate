@@ -78,9 +78,9 @@ const Land = () => {
             <div key={property.id} className="border border-gray-300 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
               <img src={property.imageUrls ? property.imageUrls[0] : '/default-image.jpg'} alt={property.town} className="w-full h-48 object-cover" />
               <div className="p-4">
-                <h2 className="font-semibold text-lg text-gray-800">{property.town}</h2>
+                <h2 className="font-semibold text-lg text-gray-800">{property.title}</h2>
                 <p className="text-gray-600">{property.city}</p>
-                <p className="font-bold text-blue-600">{property.price ? `$${property.price.toLocaleString()}` : "Price not available"}</p>
+                <p className="font-bold text-blue-600">{property.price ? `LKR${property.price.toLocaleString()}` : "Price not available"}</p>
                 <button
                   onClick={() => handleViewMore(property.id)} 
                   className="mt-4 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-700"
