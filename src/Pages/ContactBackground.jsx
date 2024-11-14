@@ -1,4 +1,4 @@
-import contact from "../../assests/Filter/house4.png"
+import contact from "../assests/Filter/house4.png"
 
 
 export const ContactBackground = () => {

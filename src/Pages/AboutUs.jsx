@@ -1,16 +1,16 @@
-import about from "../../assests/images/abountBG.png";
-import image1 from "../../assests/images/Ellipse1.png";
-import image2 from "../../assests/images/Ellipse2.png";
-import image3 from "../../assests/images/Ellipse3.png";
-import image4 from "../../assests/images/Ellipse4.png";
+import about from "../assests/images/abountBG.png";
+import image1 from "../assests/images/Ellipse1.png";
+import image2 from "../assests/images/Ellipse2.png";
+import image3 from "../assests/images/Ellipse3.png";
+import image4 from "../assests/images/Ellipse4.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../AboutUs/styles.css";
-import Footer from "../../Components/Footer";
-import Agents from "../../Components/Agents";
-import Testimonials from "../../Components/Testimonials";
-import Dream from "../../Components/Dream";
+import "../Pages/styles.css";
+import Footer from "../Components/Footer";
+import Agents from "../Components/Agents";
+import Testimonials from "../Components/Testimonials";
+import Dream from "../Components/Dream";
 
 const AboutUs = () => {
   const works = [
