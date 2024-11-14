@@ -4,7 +4,7 @@ import TopNav from "./Components/TopNav";
 import { Home } from "./Pages/Home/Home";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Contact from "./Pages/Contact/Contact";
-import Land from "./land";
+import Land from "./Land";
 import PropertyDetails from "./Pages/PropertyDetails";
 
 import HouseItem from "./Pages/Itempage/HouseItem";
