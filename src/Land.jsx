@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getDocs, collection } from 'firebase/firestore';
-import { db } from '../../../firebase';  
-import PropertySearch from '../../Components/PropertySearch';
-import Footer from "../../Components/Footer";
+import { db } from '../firebase';  
+import PropertySearch from './Components/PropertySearch';
+import Footer from "./Components/Footer";
 
 const Land = () => {
   const [properties, setProperties] = useState([]);
