@@ -54,7 +54,7 @@ export const ContactBackground = () => {
                 ADDRESS
               </h2>
               <h2 className="mt-6 font-sans text-3xl font-small tracking-tight text-black sm:text-2xl sm:leading-none">
-                Address 257/A <br /> Colombo 7, Galle
+              265/1, Gamagewaththa ,Mataraba ,Unawatuna .
               </h2>
             </div>
           </div>

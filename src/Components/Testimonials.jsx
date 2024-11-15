@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules"; 
 import { Autoplay } from "swiper/modules"; 
 
+
 const Testimonials = () => {
   const testimonials = [
     {

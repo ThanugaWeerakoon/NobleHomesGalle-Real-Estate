@@ -14,7 +14,7 @@ export const Home = () => {
         <OurProperties/>
         <Dream/>
         <Agents/>
-        <Testimonials/>
+        
         <Footer/>
     </div>
   )
