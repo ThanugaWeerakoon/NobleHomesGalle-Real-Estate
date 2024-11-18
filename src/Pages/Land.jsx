@@ -8,14 +8,11 @@ import Footer from "../Components/Footer";
 const Land = () => {
   const [properties, setProperties] = useState([]);
   const [propertyType, setPropertyType] = useState("");
-  const [selectedProvince, setSelectedProvince] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
-  const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
 
   const navigate = useNavigate();
 
-  
+  // Fetch properties from Firestore
   const fetchProperties = async () => {
     try {
       const propertiesCollection = collection(db, "homes");
@@ -31,52 +28,40 @@ const Land = () => {
     fetchProperties();
   }, []);
 
- 
-  const handleSearch = () => {
-    return properties.filter((property) => {
-      const priceValue = property.price || 0; 
-
-      const matchesPropertyType = propertyType ? property.propertyType === propertyType : true;
-      const matchesProvince = selectedProvince ? property.province === selectedProvince : true;
-      const matchesCity = selectedCity ? property.city === selectedCity : true;
-      const matchesMinPrice = minPrice ? priceValue >= parseInt(minPrice) : true;
-      const matchesMaxPrice = maxPrice ? priceValue <= parseInt(maxPrice) : true;
-
-      return (
-        matchesPropertyType &&
-        matchesProvince &&
-        matchesCity &&
-        matchesMinPrice &&
-        matchesMaxPrice
-      );
-    });
+  // Handle search logic
+  const handleSearch = (filters) => {
+    setPropertyType(filters.propertyType);
+    setSelectedCity(filters.selectedCity);
   };
 
-  const filteredProperties = useMemo(() => handleSearch(), [properties, propertyType, selectedProvince, selectedCity, minPrice, maxPrice]);
-
-  // Function to handle "View More" button click
   const handleViewMore = (propertyId) => {
     navigate(`/property/${propertyId}`);
   };
 
+  const filteredProperties = useMemo(() => {
+    return properties.filter((property) => {
+      const matchesPropertyType = propertyType ? property.propertyType === propertyType : true;
+      const matchesCity = selectedCity ? property.city === selectedCity : true;
+
+      return matchesPropertyType && matchesCity;
+    });
+  }, [properties, propertyType, selectedCity]);
+
   return (
     <div className="mx-auto">
       <h1 className="text-3xl font-bold mb-6 text-center text-black mt-9">Properties for Sale</h1>
+      
+      {/* PropertySearch component */}
       <div className="mb-6">
-        <PropertySearch onSearch={(filters) => {
-          setPropertyType(filters.propertyType);
-          setSelectedProvince(filters.selectedProvince);
-          setSelectedCity(filters.selectedCity);
-          setMinPrice(filters.minPrice);
-          setMaxPrice(filters.maxPrice);
-        }} />
+        <PropertySearch onSearch={handleSearch} />
       </div>
 
+      {/* Display filtered properties */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-9">
         {filteredProperties.length > 0 ? (
           filteredProperties.map((property) => (
             <div key={property.id} className="border border-gray-300 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-              <img src={property.imageUrls ? property.imageUrls[0] : '/default-image.jpg'} alt={property.town} className="w-full h-48 object-cover" />
+              <img src={property.imageUrls ? property.imageUrls[0] : '/default-image.jpg'} alt={property.title} className="w-full h-48 object-cover" />
               <div className="p-4">
                 <h2 className="font-semibold text-lg text-gray-800">{property.title}</h2>
                 <p className="text-gray-600">{property.city}</p>

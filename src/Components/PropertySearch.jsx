@@ -1,46 +1,26 @@
-import { useState } from "react";
-
-const provinces = [
-  "Central Province",
-  "Eastern Province",
-  "Northern Province",
-  "North Central Province",
-  "North Western Province",
-  "Sabaragamuwa Province",
-  "Southern Province",
-  "Uva Province",
-  "Western Province",
-];
-
-const cities = [
-  "Colombo",
-  "Gampaha",
-  "Kandy",
-  "Galle",
-  "Jaffna",
-  "Anuradhapura",
-  "Ratnapura",
-  "Badulla",
-  "Matara",
-  "Trincomalee",
-];
+import React, { useState } from "react";
 
 const PropertySearch = ({ onSearch }) => {
-  // State for storing filter values
   const [propertyType, setPropertyType] = useState("");
-  const [selectedProvince, setSelectedProvince] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
-  const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
 
-  // Handle search click and pass the filters back to the parent
+  const cities = [
+    "Colombo",
+    "Gampaha",
+    "Kandy",
+    "Galle",
+    "Jaffna",
+    "Anuradhapura",
+    "Ratnapura",
+    "Badulla",
+    "Matara",
+    "Trincomalee",
+  ];
+
   const handleSearch = () => {
     onSearch({
       propertyType,
-      selectedProvince,
       selectedCity,
-      minPrice,
-      maxPrice,
     });
   };
 
@@ -49,6 +29,7 @@ const PropertySearch = ({ onSearch }) => {
       <div className="rounded-xl border border-gray-300 bg-white p-8 shadow-lg w-full max-w-3xl">
         <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Search Properties</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {/* Property Type Filter */}
           <select
             id="property-type"
             className="block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
@@ -58,26 +39,11 @@ const PropertySearch = ({ onSearch }) => {
             <option value="" disabled>
               Property Type
             </option>
-            <option>House</option>
-            <option>Land</option>
+            <option value="house">House</option>
+            <option value="land">Land</option>
           </select>
 
-          <select
-            id="province"
-            className="block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
-            value={selectedProvince}
-            onChange={(e) => setSelectedProvince(e.target.value)}
-          >
-            <option value="" disabled>
-              Province
-            </option>
-            {provinces.map((province) => (
-              <option key={province} value={province}>
-                {province}
-              </option>
-            ))}
-          </select>
-
+          {/* City Filter */}
           <select
             id="city"
             className="block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
@@ -93,43 +59,16 @@ const PropertySearch = ({ onSearch }) => {
               </option>
             ))}
           </select>
+        </div>
 
-          <div className="flex flex-col">
-            <label htmlFor="min-price" className="text-gray-600 text-sm font-medium mb-1">
-              Min Sales Price
-            </label>
-            <input
-              type="text"
-              id="min-price"
-              placeholder="Min Sales Price"
-              className="mt-1 block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
-              value={minPrice}
-              onChange={(e) => setMinPrice(e.target.value)}
-            />
-          </div>
-
-          <div className="flex flex-col">
-            <label htmlFor="max-price" className="text-gray-600 text-sm font-medium mb-1">
-              Max Sales Price
-            </label>
-            <input
-              type="text"
-              id="max-price"
-              placeholder="Max Sales Price"
-              className="mt-1 block w-full rounded-md border border-gray-300 px-4 py-3 shadow -sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
-              value={maxPrice}
-              onChange={(e) => setMaxPrice(e.target.value)}
-            />
-          </div>
-
-          <div className="mt-6 flex justify-end">
-            <button
-              className="active:scale-95 rounded-lg bg-blue-600 px-6 py-3 font-bold text-white outline-none focus:ring hover:opacity-90 transition duration-200 ease-in-out"
-              onClick={handleSearch}
-            >
-              Search
-            </button>
-          </div>
+        {/* Search Button */}
+        <div className="mt-6 flex justify-end">
+          <button
+            className="active:scale-95 rounded-lg bg-blue-600 px-6 py-3 font-bold text-white outline-none focus:ring hover:opacity-90 transition duration-200 ease-in-out"
+            onClick={handleSearch}
+          >
+            Search
+          </button>
         </div>
       </div>
     </div>
