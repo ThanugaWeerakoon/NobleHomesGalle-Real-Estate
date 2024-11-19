@@ -99,7 +99,7 @@ const AboutUs = () => {
 
       <Agents />
 
-      <Testimonials />
+      
 
       <Footer />
     </div>

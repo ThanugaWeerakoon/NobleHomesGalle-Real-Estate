@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getFirestore, collection, getDocs, limit, query } from "firebase/firestore";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 import {
   Card,
   CardHeader,
@@ -12,6 +13,7 @@ import {
 const OurProperties = () => {
   const [properties, setProperties] = useState([]);
   const db = getFirestore(); // Initialize Firestore
+  const navigate = useNavigate(); // Initialize the navigate function
 
   useEffect(() => {
     const fetchProperties = async () => {
@@ -24,8 +26,13 @@ const OurProperties = () => {
     fetchProperties();
   }, [db]);
 
+  // Function to handle button click and redirect
+  const handleRedirect = () => {
+    navigate("/land"); // Redirect to the /land page
+  };
+
   return (
-    <div className="w-full p-6 ">
+    <div className="w-full p-6">
       <div className="flex flex-col items-center justify-center h-full">
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold font-poppins text-center uppercase">Our Properties</h1>
         <p className="text-md font-semibold font-poppins text-[#6F97FF] uppercase">Best Properties</p>
@@ -74,6 +81,7 @@ const OurProperties = () => {
                 ripple={false}
                 fullWidth={true}
                 className="bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:scale-105 hover:shadow-none focus:bg-blue-600 focus:scale-105 focus:shadow-none active:bg-blue-700 active:scale-100"
+                onClick={handleRedirect} // Call handleRedirect on button click
               >
                 Total Price Rs.{property.price}
               </Button>
