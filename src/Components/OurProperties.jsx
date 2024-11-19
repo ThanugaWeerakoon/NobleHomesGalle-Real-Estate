@@ -80,7 +80,7 @@ const OurProperties = () => {
               <Button
                 ripple={false}
                 fullWidth={true}
-                className="bg-blue-500 text-white shadow-none hover:bg-blue-600 hover:scale-105 hover:shadow-none focus:bg-blue-600 focus:scale-105 focus:shadow-none active:bg-blue-700 active:scale-100"
+                className="bg-back text-white shadow-none hover:bg-blue-600 hover:scale-105 hover:shadow-none focus:bg-blue-600 focus:scale-105 focus:shadow-none active:bg-blue-700 active:scale-100"
                 onClick={handleRedirect} // Call handleRedirect on button click
               >
                 Total Price Rs.{property.price}
