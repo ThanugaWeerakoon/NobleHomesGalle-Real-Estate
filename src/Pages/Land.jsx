@@ -61,7 +61,7 @@ const Land = () => {
         {filteredProperties.length > 0 ? (
           filteredProperties.map((property) => (
             <div key={property.id} className="border border-gray-300 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
-              <img src={property.imageUrls ? property.imageUrls[0] : '/default-image.jpg'} alt={property.title} className="w-full h-96 object-cover" />
+              <img src={property.imageUrls ? property.imageUrls[3] : '/default-image.jpg'} alt={property.title} className="w-full h-96 object-cover" />
               <div className="p-4">
                 <h2 className="font-semibold text-lg text-gray-800">{property.title}</h2>
                 <p className="text-gray-600">{property.city}</p>
