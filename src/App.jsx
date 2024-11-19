@@ -6,6 +6,7 @@ import AboutUs from "./Pages/AboutUs";
 import Contact from "./Pages/Contact";
 import Land from "./Pages/Land";
 import PropertyDetails from "./Pages/PropertyDetails";
+import Admin from "./Components/Admin";
 
 
 import HideNavAndFooter from "./Components/HideNavAndFooter";
@@ -23,7 +24,8 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/land" element={<Land />} />
-      
+          <Route path="/admin" element={<Admin />} />
+          
           <Route path="/property/:propertyId" element={<PropertyDetails />} />
 
           

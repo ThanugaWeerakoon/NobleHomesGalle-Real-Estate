@@ -46,7 +46,7 @@ const OurProperties = () => {
               className="h-96 rounded-lg"
             >
               <img
-                src={property.imageUrls[0]} // Assuming you want to show the first image
+                src={property.imageUrls[3]} // Assuming you want to show the first image
                 alt="card-image"
                 className="h-full w-full object-cover rounded-lg"
               />
