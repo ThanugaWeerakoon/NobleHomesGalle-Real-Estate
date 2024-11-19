@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { db } from '../../firebase'; // Firebase Firestore config
 import { doc, getDoc } from 'firebase/firestore';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
 
 const PropertyDetails = () => {
   const { propertyId } = useParams();
@@ -11,6 +9,7 @@ const PropertyDetails = () => {
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [mainImage, setMainImage] = useState(''); // State to hold the currently selected main image
 
   // Fetch property data from Firebase
   useEffect(() => {
@@ -21,6 +20,9 @@ const PropertyDetails = () => {
 
         if (docSnap.exists()) {
           setProperty(docSnap.data());
+          if (docSnap.data().imageUrls && docSnap.data().imageUrls.length > 0) {
+            setMainImage(docSnap.data().imageUrls[0]); // Set the first image as the main image
+          }
         } else {
           setError('Property not found!');
         }
@@ -51,31 +53,30 @@ const PropertyDetails = () => {
       {/* Property Title */}
       <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">{property.title}</h1>
 
-      {/* Property Images / Slider */}
+      {/* Main Image Display */}
       <div className="mb-12 rounded-lg overflow-hidden shadow-2xl">
-        <Swiper
-          spaceBetween={15}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{ delay: 3000 }}
-          pagination={{ clickable: true }}
-          navigation={true}
-          className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]"
-        >
-          {property.imageUrls && property.imageUrls.length > 0 ? (
-            property.imageUrls.map((image, index) => (
-              <SwiperSlide key={index}>
-                <img
-                  src={image}
-                  alt={`Property Image ${index + 1}`}
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </SwiperSlide>
-            ))
-          ) : (
-            <div className="text-center py-16 text-gray-500">No images available</div>
-          )}
-        </Swiper>
+        <img
+          src={mainImage || '/default-image.jpg'}
+          alt="Main Property"
+          className="w-full h-[500px] object-cover rounded-lg"
+        />
+      </div>
+
+      {/* Thumbnail Images */}
+      <div className="flex space-x-4 mb-12">
+        {property.imageUrls && property.imageUrls.length > 0 ? (
+          property.imageUrls.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Thumbnail ${index + 1}`}
+              className="w-24 h-24 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500"
+              onClick={() => setMainImage(image)} // Set clicked thumbnail as the main image
+            />
+          ))
+        ) : (
+          <div className="text-center py-16 text-gray-500">No images available</div>
+        )}
       </div>
 
       {/* Property Description */}
