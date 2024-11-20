@@ -18,14 +18,19 @@ export const ContactPageDown = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     // Send email using EmailJS
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // Replace with your service ID
-        "YOUR_TEMPLATE_ID", // Replace with your template ID
-        formData,
-        "YOUR_USER_ID" // Replace with your user ID
+        "service_8okpes5", // Replace with your service ID
+        "template_s5kqxxp", // Replace with your template ID
+        {
+          from_name: formData.name,
+          subject: formData.subject,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "4iIl_T6JN_vNraMfh" // Replace with your user ID
       )
       .then(
         (response) => {
@@ -41,15 +46,13 @@ export const ContactPageDown = () => {
           alert("An error occurred. Please try again.");
         }
       );
-
+  
     // Open WhatsApp to share details
-    const whatsappMessage = `Hello! Here are the details:\n\nName: ${formData.name}\nSubject: ${formData.subject}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
-    const whatsappURL = `https://wa.me/WHATSAPP_NUMBER?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
-
+    
+  
     window.open(whatsappURL, "_blank");
   };
+  
 
   return (
     <div className="px-4 py-16 mx-auto w-full sm:px-24 lg:px-8 lg:py-20">
