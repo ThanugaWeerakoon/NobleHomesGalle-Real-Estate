@@ -17,44 +17,43 @@ const TopNav = () => {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 lg:justify-center">
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal">
-        <a href="/" className="flex items-center">
+      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal hover:text-blue-500 transition-all duration-300 ease-in-out">
+        <Link to="/" className="flex items-center">
           Home
-        </a>
+        </Link>
       </Typography>
 
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal">
-        <a href="land" className="flex items-center">
+      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal hover:text-blue-500 transition-all duration-300 ease-in-out">
+        <Link to="/land" className="flex items-center">
           Properties
-        </a>
+        </Link>
       </Typography>
 
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal">
-        <a href="about" className="flex items-center">
+      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal hover:text-blue-500 transition-all duration-300 ease-in-out">
+        <Link to="/about" className="flex items-center">
           About
-        </a>
+        </Link>
       </Typography>
 
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal">
-        <a href="contact" className="flex items-center">
+      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal hover:text-blue-500 transition-all duration-300 ease-in-out">
+        <Link to="/contact" className="flex items-center">
           Contact
-        </a>
+        </Link>
       </Typography>
     </ul>
   );
 
   return (
     <div className="w-full">
-      <Navbar className="sticky text-black top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+      <Navbar className="sticky text-black top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-white shadow-md transition-all duration-300 ease-in-out hover:shadow-lg">
         <div className="flex items-center justify-between text-blue-gray-900">
           {/* Logo Section */}
           <div className="flex items-center space-x-4">
-            <img src={logo} alt="Logo" className="h-8 w-auto" /> {/* Using imported logo */}
-            <Typography as="a" href="#" className="mr-4 cursor-pointer py-1.5 font-medium">
-              NobleHomes Galle
-            </Typography>
+            <Link to="/" className="flex items-center">
+              <img src={logo} alt="Logo" className="h-16 w-auto transition-all duration-300 ease-in-out hover:scale-110" /> {/* Increased size of logo and hover effect */}
+            </Link>
           </div>
-          
+
           <div className="flex-grow lg:flex lg:justify-center lg:items-center">
             <div className="mr-4 hidden lg:block">{navList}</div>
           </div>
@@ -62,7 +61,7 @@ const TopNav = () => {
           {/* Admin Link */}
           <div className="flex items-center">
             <Link to="/admin">
-              <Typography variant="small" color="blue-gray" className="cursor-pointer text-sm font-medium">
+              <Typography variant="small" color="blue-gray" className="cursor-pointer text-sm font-medium hover:text-blue-500 transition-all duration-300 ease-in-out">
                 ADMIN
               </Typography>
             </Link>

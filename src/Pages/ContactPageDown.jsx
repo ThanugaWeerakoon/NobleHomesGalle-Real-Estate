@@ -83,7 +83,7 @@ export const ContactPageDown = () => {
               scrolling="no"
               marginHeight="0"
               marginWidth="0"
-              src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=07%20R.G.%20Senanayake%20Mawatha,%20Colombo%2000700+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d5611.377176007727!2d80.25919272264068!3d6.016302565404652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d6.0189658259890395!2d80.26140797556717!5e0!3m2!1sen!2slk!4v1732173530901!5m2!1sen!2slk"
               title="Google Maps"
             ></iframe>
           </div>
