@@ -129,7 +129,7 @@ const PropertyDetails = () => {
       <div className="bg-gray-100 p-8 rounded-lg shadow-lg mb-12">
         <h3 className="text-3xl font-semibold text-gray-800 mb-4">Contact Information</h3>
         <p className="text-lg text-gray-700">For more information, please contact our real estate agent.</p>
-        <p className="text-lg text-gray-700 mt-2"><strong>Agent:</strong> {property.agentName || 'Thilak Gamage'}</p>
+        <p className="text-lg text-gray-700 mt-2"><strong>Agent:</strong> {property.agentName || 'Thilak Gallage'}</p>
         <p className="text-lg text-gray-700"><strong>Phone:</strong> {property.agentPhone || '94-778354380'}</p>
       </div>
 
