@@ -65,7 +65,11 @@ const Land = () => {
               <div className="p-4">
                 <h2 className="font-semibold text-lg text-gray-800">{property.title}</h2>
                 <p className="text-gray-600">{property.city}</p>
-                <p className="font-bold text-black">{property.price ? `LKR${property.price.toLocaleString()}` : "Price not available"}</p>
+                <p className="font-bold text-black">
+  {property.price ? `LKR${property.price.toLocaleString()}` : "Price not available"}
+</p>
+
+
                 <button
                   onClick={() => handleViewMore(property.id)} 
                   className="mt-4 py-2 px-4 bg-black text-white rounded-md hover:bg-blue-700"
