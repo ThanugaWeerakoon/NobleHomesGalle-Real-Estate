@@ -5,7 +5,7 @@ import { doc, getDoc } from 'firebase/firestore';
 
 const PropertyDetails = () => {
   const { propertyId } = useParams();
-  
+
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -48,6 +48,8 @@ const PropertyDetails = () => {
     return <div className="text-center text-red-600 text-2xl font-semibold">Property not found!</div>;
   }
 
+ 
+
   return (
     <div className="max-w-screen-xl mx-auto p-8 md:p-12 bg-white shadow-xl rounded-lg mt-8 space-y-10">
       {/* Property Title */}
@@ -58,7 +60,7 @@ const PropertyDetails = () => {
         <img
           src={mainImage || '/default-image.jpg'}
           alt="Main Property"
-          className="w-full h-[1000px] object-cover rounded-lg"
+          className="w-full h-[500px] object-cover rounded-lg"
         />
       </div>
 
@@ -93,14 +95,15 @@ const PropertyDetails = () => {
             <li><strong>Address:</strong> {property.address}</li>
             <li><strong>City:</strong> {property.city}</li>
             <li><strong>Town:</strong> {property.town}</li>
-            <li><strong>Price:</strong> Rs{property.price}</li>
+            <li><strong>Price:</strong> Rs {property.price}</li>
             <li><strong>Bathrooms:</strong> {property.bathrooms}</li>
             <li><strong>Bedrooms:</strong> {property.bedrooms}</li>
             <li><strong>Floor Area:</strong> {property.floorArea} sqft</li>
             <li><strong>Furnished Status:</strong> {property.furnishedStatus}</li>
             <li><strong>Age of Building:</strong> {property.ageOfBuilding}</li>
             <li><strong>Parking Space:</strong> {property.parkingSpace} vehicles</li>
-            <li><strong>Perches:</strong> {property.perches}</li>
+            <li><strong>Land Size:</strong> {property.perches} {property.landUnit}</li>
+
             <li><strong>No of Floors:</strong> {property.noOfFloors}</li>
             <li><strong>Road Width:</strong> {property.roadWidth} feet</li>
           </ul>
