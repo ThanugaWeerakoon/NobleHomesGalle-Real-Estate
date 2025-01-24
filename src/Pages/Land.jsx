@@ -15,7 +15,7 @@ const Land = () => {
   // Fetch properties from Firestore
   const fetchProperties = async () => {
     try {
-      const propertiesCollection = collection(db, "homes");
+      const propertiesCollection = collection(db, "homes"); // Change this to match your Firestore structure
       const propertySnapshot = await getDocs(propertiesCollection);
       const propertyList = propertySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       setProperties(propertyList);
@@ -47,6 +47,11 @@ const Land = () => {
     });
   }, [properties, propertyType, selectedCity]);
 
+  // Utility function for price formatting
+  const formatPrice = (price) => {
+    return price ? `LKR${Number(price).toLocaleString()}` : "Price not available";
+  };
+
   return (
     <div className="mx-auto">
       <h1 className="text-3xl font-bold mb-6 text-center text-black mt-9">Properties for Sale</h1>
@@ -65,10 +70,7 @@ const Land = () => {
               <div className="p-4">
                 <h2 className="font-semibold text-lg text-gray-800">{property.title}</h2>
                 <p className="text-gray-600">{property.city}</p>
-                <p className="font-bold text-black">
-  {property.price ? `LKR${property.price.toLocaleString()}` : "Price not available"}
-</p>
-
+                <p className="font-bold text-black">{formatPrice(property.price)}</p>
 
                 <button
                   onClick={() => handleViewMore(property.id)} 
