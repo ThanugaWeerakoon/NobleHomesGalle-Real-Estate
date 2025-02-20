@@ -7,10 +7,8 @@ import Contact from "./Pages/Contact";
 import Land from "./Pages/Land";
 import PropertyDetails from "./Pages/PropertyDetails";
 import Admin from "./Components/Admin";
-
-
 import HideNavAndFooter from "./Components/HideNavAndFooter";
-import TestVideo from "./Pages/TestVideo";
+
 
 function App() {
   return (
@@ -26,11 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/land" element={<Land />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/test" element={<TestVideo />} />
-          
           <Route path="/property/:propertyId" element={<PropertyDetails />} />
-
-          
         </Routes>
       </BrowserRouter>
     </>

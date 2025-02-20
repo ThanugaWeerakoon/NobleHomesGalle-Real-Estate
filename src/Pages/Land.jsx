@@ -29,13 +29,12 @@ const Land = () => {
     }
   };
 
-  // Fetch cities from localStorage on initial load
+ 
   useEffect(() => {
     const storedCities = JSON.parse(localStorage.getItem("cities"));
     if (storedCities) {
       setCityList(storedCities);
     } else {
-      // Default city list
       setCityList([
         "Colombo",
         "Gampaha",
@@ -52,14 +51,12 @@ const Land = () => {
     fetchProperties();
   }, []);
 
-  // Save city list to localStorage whenever it's updated
   useEffect(() => {
     if (cityList.length > 0) {
       localStorage.setItem("cities", JSON.stringify(cityList));
     }
   }, [cityList]);
 
-  // Handle search logic
   const handleSearch = (filters) => {
     setPropertyType(filters.propertyType);
     setSelectedCity(filters.selectedCity);
@@ -101,8 +98,6 @@ const Land = () => {
           setCityList={setCityList}
         />
       </div>
-
-      {/* Display filtered properties */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-9">
         {filteredProperties.length > 0 ? (
           filteredProperties.map((property) => (
