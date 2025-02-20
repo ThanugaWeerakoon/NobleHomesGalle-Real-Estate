@@ -11,6 +11,7 @@ import Footer from "../Components/Footer";
 import Agents from "../Components/Agents";
 import Testimonials from "../Components/Testimonials";
 import Dream from "../Components/Dream";
+import Fab from "../Components/Fab";
 
 const AboutUs = () => {
   const works = [
@@ -100,7 +101,7 @@ const AboutUs = () => {
       <Agents />
 
       
-
+      <Fab />
       <Footer />
     </div>
   );
