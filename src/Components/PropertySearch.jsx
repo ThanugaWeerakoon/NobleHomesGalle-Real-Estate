@@ -57,7 +57,7 @@ const PropertySearch = ({ onSearch, cityList, setCityList }) => {
         </div>
 
         {/* Add City */}
-        <div className="mt-4 flex gap-4">
+        {/* <div className="mt-4 flex gap-4">
           <input
             type="text"
             value={newCity}
@@ -71,7 +71,7 @@ const PropertySearch = ({ onSearch, cityList, setCityList }) => {
           >
             Add City
           </button>
-        </div>
+        </div> */}
 
         <div className="mt-6 flex justify-end gap-5">
           <button
