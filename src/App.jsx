@@ -7,9 +7,8 @@ import Contact from "./Pages/Contact";
 import Land from "./Pages/Land";
 import PropertyDetails from "./Pages/PropertyDetails";
 import Admin from "./Components/Admin";
-
-
 import HideNavAndFooter from "./Components/HideNavAndFooter";
+
 
 function App() {
   return (
@@ -25,10 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/land" element={<Land />} />
           <Route path="/admin" element={<Admin />} />
-          
           <Route path="/property/:propertyId" element={<PropertyDetails />} />
-
-          
         </Routes>
       </BrowserRouter>
     </>
