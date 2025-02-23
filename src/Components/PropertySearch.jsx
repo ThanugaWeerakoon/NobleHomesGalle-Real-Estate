@@ -15,19 +15,36 @@ const PropertySearch = ({ onSearch }) => {
     "Badulla",
     "Matara",
     "Trincomalee",
+    "Weligama",
+    "Mirissa",
+    "Tangalle",
+    "Dickwella",
+    "Udugama",
+    "Akuressa",
+    "Deniyaya",
+    "Hikkaduwa",
+    "Bentota",
+    "Peradeniya",
+    "Pilimathalawa",
+    "Katugastota",
+    "Gampola",
+    "Matale",
+    "Kegalle",
   ];
 
   const handleSearch = () => {
     onSearch({
-      propertyType,
-      selectedCity,
+      propertyType: propertyType.trim().toLowerCase(),
+      selectedCity: selectedCity.trim().toLowerCase(),
     });
   };
 
   return (
     <div className="flex justify-center p-6">
       <div className="rounded-xl border border-gray-300 bg-white p-8 shadow-lg w-full max-w-3xl">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Search Properties</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+          Search Properties
+        </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {/* Property Type Filter */}
           <select
