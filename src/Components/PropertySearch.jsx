@@ -5,15 +5,7 @@ import React, { useState } from "react";
 const PropertySearch = ({ onSearch, cityList, setCityList }) => {
   const [propertyType, setPropertyType] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
-  const [newCity, setNewCity] = useState(""); 
-  
-  const handleAddCity = () => {
-    if (newCity && !cityList.includes(newCity)) {
-      const updatedCities = [...cityList, newCity];
-      setCityList(updatedCities); 
-      setNewCity(""); 
-    }
-  };
+  const [newCity, setNewCity] = useState("");
 
   const handleSearch = () => {
     onSearch({ propertyType, selectedCity });
@@ -56,23 +48,6 @@ const PropertySearch = ({ onSearch, cityList, setCityList }) => {
           </select>
         </div>
 
-        {/* Add City */}
-        {/* <div className="mt-4 flex gap-4">
-          <input
-            type="text"
-            value={newCity}
-            onChange={(e) => setNewCity(e.target.value)}
-            className="block w-full rounded-md border border-gray-300 px-4 py-3"
-            placeholder="Add City"
-          />
-          <button
-            onClick={handleAddCity}
-            className="bg-blue-600 text-white px-3  rounded-md"
-          >
-            Add City
-          </button>
-        </div> */}
-
         <div className="mt-6 flex justify-end gap-5">
           <button
             onClick={handleSearch}
@@ -85,6 +60,5 @@ const PropertySearch = ({ onSearch, cityList, setCityList }) => {
     </div>
   );
 };
-
 
 export default PropertySearch;
