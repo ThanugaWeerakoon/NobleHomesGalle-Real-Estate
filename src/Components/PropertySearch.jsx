@@ -5,10 +5,47 @@ import React, { useState } from "react";
 const PropertySearch = ({ onSearch, cityList, setCityList }) => {
   const [propertyType, setPropertyType] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
+
+
+  const cities = [
+    "Colombo",
+    "Gampaha",
+    "Kandy",
+    "Galle",
+    "Jaffna",
+    "Anuradhapura",
+    "Ratnapura",
+    "Badulla",
+    "Matara",
+    "Trincomalee",
+    "Weligama",
+    "Mirissa",
+    "Tangalle",
+    "Dickwella",
+    "Udugama",
+    "Akuressa",
+    "Deniyaya",
+    "Hikkaduwa",
+    "Bentota",
+    "Peradeniya",
+    "Pilimathalawa",
+    "Katugastota",
+    "Gampola",
+    "Matale",
+    "Kegalle",
+  ];
+
+  const handleSearch = () => {
+    onSearch({
+      propertyType: propertyType.trim().toLowerCase(),
+      selectedCity: selectedCity.trim().toLowerCase(),
+    });
+
   const [newCity, setNewCity] = useState("");
 
   const handleSearch = () => {
     onSearch({ propertyType, selectedCity });
+
   };
 
   return (

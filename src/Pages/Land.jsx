@@ -1,4 +1,8 @@
+
+import React, { useEffect, useState, useMemo } from "react";
+=======
 import  { useEffect, useState, useMemo } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../firebase";
@@ -69,9 +73,17 @@ const Land = () => {
   const filteredProperties = useMemo(() => {
     return properties.filter((property) => {
       const matchesPropertyType = propertyType
+
+        ? property.propertyType.toLowerCase() === propertyType
+        : true;
+      const matchesCity = selectedCity
+        ? property.city.trim().toLowerCase() === selectedCity
+        : true;
+
         ? property.propertyType === propertyType
         : true;
       const matchesCity = selectedCity ? property.city === selectedCity : true;
+
 
       return matchesPropertyType && matchesCity;
     });
@@ -80,7 +92,11 @@ const Land = () => {
   // Utility function for price formatting
   const formatPrice = (price) => {
     return price
+
+      ? `LKR${Number(price).toLocaleString()}.00`
+
       ? `LKR ${Number(price).toLocaleString()}`
+
       : "Price not available";
   };
 
@@ -120,7 +136,11 @@ const Land = () => {
                 </h2>
                 <p className="text-gray-600">{property.city}</p>
                 <p className="font-bold text-black">
+
+                  {formatPrice(property.price)}
+
                   {formatPrice(property.price)}.00
+
                 </p>
 
                 <button
