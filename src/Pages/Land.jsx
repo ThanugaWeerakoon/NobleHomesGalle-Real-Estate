@@ -1,21 +1,27 @@
+
 import React, { useEffect, useState, useMemo } from "react";
+=======
+import  { useEffect, useState, useMemo } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../firebase";
 import PropertySearch from "../Components/PropertySearch";
 import Footer from "../Components/Footer";
+import Fab from "../Components/Fab";
 
 const Land = () => {
   const [properties, setProperties] = useState([]);
   const [propertyType, setPropertyType] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
+  const [cityList, setCityList] = useState([]);
 
   const navigate = useNavigate();
 
   // Fetch properties from Firestore
   const fetchProperties = async () => {
     try {
-      const propertiesCollection = collection(db, "homes"); // Change this to match your Firestore structure
+      const propertiesCollection = collection(db, "homes");
       const propertySnapshot = await getDocs(propertiesCollection);
       const propertyList = propertySnapshot.docs.map((doc) => ({
         id: doc.id,
@@ -27,11 +33,34 @@ const Land = () => {
     }
   };
 
+ 
   useEffect(() => {
+    const storedCities = JSON.parse(localStorage.getItem("cities"));
+    if (storedCities) {
+      setCityList(storedCities);
+    } else {
+      setCityList([
+        "Colombo",
+        "Gampaha",
+        "Kandy",
+        "Galle",
+        "Jaffna",
+        "Anuradhapura",
+        "Ratnapura",
+        "Badulla",
+        "Matara",
+        "Trincomalee",
+      ]);
+    }
     fetchProperties();
   }, []);
 
-  // Handle search logic
+  useEffect(() => {
+    if (cityList.length > 0) {
+      localStorage.setItem("cities", JSON.stringify(cityList));
+    }
+  }, [cityList]);
+
   const handleSearch = (filters) => {
     setPropertyType(filters.propertyType);
     setSelectedCity(filters.selectedCity);
@@ -44,11 +73,17 @@ const Land = () => {
   const filteredProperties = useMemo(() => {
     return properties.filter((property) => {
       const matchesPropertyType = propertyType
+
         ? property.propertyType.toLowerCase() === propertyType
         : true;
       const matchesCity = selectedCity
         ? property.city.trim().toLowerCase() === selectedCity
         : true;
+
+        ? property.propertyType === propertyType
+        : true;
+      const matchesCity = selectedCity ? property.city === selectedCity : true;
+
 
       return matchesPropertyType && matchesCity;
     });
@@ -57,7 +92,11 @@ const Land = () => {
   // Utility function for price formatting
   const formatPrice = (price) => {
     return price
+
       ? `LKR${Number(price).toLocaleString()}.00`
+
+      ? `LKR ${Number(price).toLocaleString()}`
+
       : "Price not available";
   };
 
@@ -69,10 +108,12 @@ const Land = () => {
 
       {/* PropertySearch component */}
       <div className="mb-6">
-        <PropertySearch onSearch={handleSearch} />
+        <PropertySearch
+          onSearch={handleSearch}
+          cityList={cityList}
+          setCityList={setCityList}
+        />
       </div>
-
-      {/* Display filtered properties */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-9">
         {filteredProperties.length > 0 ? (
           filteredProperties.map((property) => (
@@ -95,7 +136,11 @@ const Land = () => {
                 </h2>
                 <p className="text-gray-600">{property.city}</p>
                 <p className="font-bold text-black">
+
                   {formatPrice(property.price)}
+
+                  {formatPrice(property.price)}.00
+
                 </p>
 
                 <button
@@ -113,7 +158,8 @@ const Land = () => {
           </div>
         )}
       </div>
-
+      
+      <Fab />
       <Footer />
     </div>
   );

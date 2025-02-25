@@ -1,8 +1,11 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 
-const PropertySearch = ({ onSearch }) => {
+const PropertySearch = ({ onSearch, cityList, setCityList }) => {
   const [propertyType, setPropertyType] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
+
 
   const cities = [
     "Colombo",
@@ -37,6 +40,12 @@ const PropertySearch = ({ onSearch }) => {
       propertyType: propertyType.trim().toLowerCase(),
       selectedCity: selectedCity.trim().toLowerCase(),
     });
+
+  const [newCity, setNewCity] = useState("");
+
+  const handleSearch = () => {
+    onSearch({ propertyType, selectedCity });
+
   };
 
   return (
@@ -46,10 +55,9 @@ const PropertySearch = ({ onSearch }) => {
           Search Properties
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {/* Property Type Filter */}
           <select
             id="property-type"
-            className="block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
+            className="block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm"
             value={propertyType}
             onChange={(e) => setPropertyType(e.target.value)}
           >
@@ -60,17 +68,16 @@ const PropertySearch = ({ onSearch }) => {
             <option value="land">Land</option>
           </select>
 
-          {/* City Filter */}
           <select
             id="city"
-            className="block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 transition duration-200 ease-in-out"
+            className="block w-full rounded-md border border-gray-300 px-4 py-3 shadow-sm"
             value={selectedCity}
             onChange={(e) => setSelectedCity(e.target.value)}
           >
             <option value="" disabled>
               City
             </option>
-            {cities.map((city) => (
+            {cityList.map((city) => (
               <option key={city} value={city}>
                 {city}
               </option>
@@ -78,11 +85,10 @@ const PropertySearch = ({ onSearch }) => {
           </select>
         </div>
 
-        {/* Search Button */}
-        <div className="mt-6 flex justify-end">
+        <div className="mt-6 flex justify-end gap-5">
           <button
-            className="active:scale-95 rounded-lg bg-blue-600 px-6 py-3 font-bold text-white outline-none focus:ring hover:opacity-90 transition duration-200 ease-in-out"
             onClick={handleSearch}
+            className="bg-blue-600 text-white px-6 py-3 rounded-md"
           >
             Search
           </button>
