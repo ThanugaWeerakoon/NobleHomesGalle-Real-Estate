@@ -83,15 +83,10 @@ const filteredProperties = useMemo(() => {
 
 
   // Utility function for price formatting
-  const formatPrice = (price) => {
-    return price
+const formatPrice = (price) => {
+  return price ? `LKR ${Number(price).toLocaleString()}.00` : "Price not available";
+};
 
-      ? `LKR${Number(price).toLocaleString()}.00`
-
-      ? `LKR ${Number(price).toLocaleString()}`
-
-      : "Price not available";
-  };
 
   return (
     <div className="mx-auto">
