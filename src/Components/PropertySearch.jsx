@@ -97,5 +97,5 @@ const PropertySearch = ({ onSearch, cityList, setCityList }) => {
     </div>
   );
 };
-
+}
 export default PropertySearch;
