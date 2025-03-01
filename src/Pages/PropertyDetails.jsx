@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebase"; // Firebase Firestore config
 import { doc, getDoc } from "firebase/firestore";
-import defaultVideo from "../assests/video/sample.mp4"; // Default video for properties without videos
+
 
 const PropertyDetails = () => {
   const { propertyId } = useParams();
