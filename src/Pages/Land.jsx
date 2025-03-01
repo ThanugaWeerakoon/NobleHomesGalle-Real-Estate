@@ -1,5 +1,3 @@
-
-import React, { useEffect, useState, useMemo } from "react";
 import  { useEffect, useState, useMemo } from "react";
 
 import { useNavigate } from "react-router-dom";
@@ -69,24 +67,20 @@ const Land = () => {
     navigate(`/property/${propertyId}`);
   };
 
-  const filteredProperties = useMemo(() => {
-    return properties.filter((property) => {
-      const matchesPropertyType = propertyType
+const filteredProperties = useMemo(() => {
+  return properties.filter((property) => {
+    const matchesPropertyType = propertyType
+      ? property.propertyType.toLowerCase() === propertyType.toLowerCase()
+      : true;
 
-        ? property.propertyType.toLowerCase() === propertyType
-        : true;
-      const matchesCity = selectedCity
-        ? property.city.trim().toLowerCase() === selectedCity
-        : true;
+    const matchesCity = selectedCity
+      ? property.city.trim().toLowerCase() === selectedCity.toLowerCase()
+      : true;
 
-        ? property.propertyType === propertyType
-        : true;
-      const matchesCity = selectedCity ? property.city === selectedCity : true;
+    return matchesPropertyType && matchesCity;
+  });
+}, [properties, propertyType, selectedCity]);
 
-
-      return matchesPropertyType && matchesCity;
-    });
-  }, [properties, propertyType, selectedCity]);
 
   // Utility function for price formatting
   const formatPrice = (price) => {
