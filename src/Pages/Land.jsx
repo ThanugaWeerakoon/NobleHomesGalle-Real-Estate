@@ -125,9 +125,7 @@ const formatPrice = (price) => {
                 <p className="text-gray-600">{property.city}</p>
                 <p className="font-bold text-black">
 
-                  {formatPrice(property.price)}
-
-                  {formatPrice(property.price)}.00
+                  {formatPrice(property.price)}               
 
                 </p>
 
